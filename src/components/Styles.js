@@ -33,6 +33,7 @@ const Button = styled('button')`
     'p-0',
     'rounded-full',
     'text-base',
+    'tracking-button',
     'uppercase',
     'w-full',
   ])};
