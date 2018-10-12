@@ -9,14 +9,14 @@ const seo = {
   pageTitle: 'Welcome',
 } */
 
-const IndexPage = ({ data }) => (
+const ProductPage = ({ data }) => (
   <Layout>
     {/* <Seo {...seo} pathname={location.pathname} /> */}
-    <h1>{data.index.data.title.text}</h1>
+    <h1>{data.product.data.title.text}</h1>
   </Layout>
 )
 
-IndexPage.propTypes = {
+ProductPage.propTypes = {
   data: PropTypes.shape({
     index: PropTypes.shape({
       data: PropTypes.shape({
@@ -31,11 +31,11 @@ IndexPage.propTypes = {
   }).isRequired,
 }
 
-export default IndexPage
+export default ProductPage
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    index: prismicHomepage {
+  query ProductQuery($uid: String!) {
+    product: prismicProduct(uid: { eq: $uid }) {
       data {
         title {
           text
@@ -45,7 +45,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    seo: prismicHomepage {
+    seo: prismicProduct(uid: { eq: $uid }) {
       data {
         seotitle
         seodescription

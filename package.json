@@ -1,17 +1,10 @@
 {
-  "name": "mkit-bundle-gatsby",
+  "name": "su-10",
   "version": "1.0.0",
-  "description": "Micro Gatsby project bundle",
+  "description": "Company' site",
   "keywords": [
-    "mkit",
-    "bundle",
-    "micro",
     "Gatsby",
-    "web",
-    "project",
-    "boilerplate",
-    "template",
-    "starter"
+    "Prismic"
   ],
   "scripts": {
     "lint": "eslint --fix src/**/*.js && prettier --write src/**/*.{js,json,md}",
@@ -20,6 +13,8 @@
     "build:favicons": "node scripts/favicons",
     "build:gatsby": "gatsby build",
     "build": "npm run build:dir && npm run build:favicons && npm run build:gatsby",
+    "prebuild": "postcss tailwind.css -o tailwind.custom.css",
+    "predevelop": "postcss tailwind.css -o tailwind.custom.css",
     "serve": "gatsby serve"
   },
   "husky": {
@@ -38,19 +33,30 @@
     ]
   },
   "dependencies": {
+    "babel-plugin-tailwind": "^0.1.10",
+    "dotenv": "^6.1.0",
+    "emotion": "^9.2.12",
+    "emotion-server": "^9.2.12",
     "favicons": "^5.1.1",
     "gatsby": "^2.0.19",
+    "gatsby-image": "^2.0.13",
+    "gatsby-plugin-emotion": "^2.0.5",
     "gatsby-plugin-google-analytics": "^2.0.6",
     "gatsby-plugin-manifest": "^2.0.4",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-robots-txt": "^1.3.0",
+    "gatsby-plugin-sharp": "^2.0.6",
     "gatsby-plugin-sitemap": "^2.0.1",
     "gatsby-plugin-webpack-size": "0.0.3",
+    "gatsby-source-prismic": "^2.0.0",
+    "gatsby-transformer-sharp": "^2.1.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-helmet": "^5.2.0"
+    "react-emotion": "^9.2.12",
+    "react-helmet": "^5.2.0",
+    "tailwindcss": "^0.6.6"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
@@ -62,16 +68,16 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
+    "postcss": "^7.0.5",
+    "postcss-cli": "^6.0.0",
     "prettier": "^1.14.3"
   },
-  "author": "MK IT Ltd. <hi@mkit.io>",
-  "homepage": "https://github.com/mkitio/mkit-bundle-gatsby#readme",
+  "author": "Alexei Accio <alexei.accio@gmail.com>",
+  "homepage": "https://github.com/alexeiaccio/su-10#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mkitio/mkit-bundle-gatsby.git"
+    "url": "git+https://github.com/alexeiaccio/su-10.git"
   },
-  "bugs": {
-    "url": "https://github.com/mkitio/mkit-bundle-gatsby/issues"
-  },
+  "private": true,
   "license": "MIT"
 }

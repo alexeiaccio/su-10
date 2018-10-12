@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import jsonldGenerator from '../../utils/jsonld-generator'
+import jsonldGenerator from '../utils/jsonld-generator'
 
 const query = graphql`
   query {
