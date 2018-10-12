@@ -2,25 +2,25 @@
 import React from 'react'
 /* import PropTypes from 'prop-types'  */
 import { Link } from 'gatsby'
-import styled, { cx, css } from 'react-emotion'
+import styled, { cx } from 'react-emotion'
 
-import { Button, Col, Container, Row } from './Styles'
+import {
+  Button,
+  Col,
+  Container,
+  HiddenToMD,
+  HiddenToSM,
+  HiddenToXL,
+  JustifyEnd,
+  MarginLeftAuto,
+  Row,
+  SquareButton,
+  ShowToMD,
+} from './Styles'
 import logoSvg from '../assets/logo.svg'
 
 const Description = styled('div')`
   ${tw(['leading-normal', 'text-base'])};
-`
-
-const HiddenToMD = css`
-  ${tw(['hidden', 'md:block'])};
-`
-
-const HiddenToSM = css`
-  ${tw(['hidden', 'sm:block'])};
-`
-
-const HiddenToXL = css`
-  ${tw(['hidden', 'xl:block'])};
 `
 
 const Logo = styled(Link)`
@@ -34,10 +34,7 @@ const Logo = styled(Link)`
     'w-full',
   ])}
   background-image: url(${logoSvg});
-`
-
-const MarginLeftAuto = css`
-  ${tw(['ml-auto'])};
+  min-width: 6.85rem;
 `
 
 const RowItemsCentered = styled(Row)`
@@ -60,7 +57,7 @@ const Header = () => (
   <StyledHeader>
     <Container>
       <RowItemsCentered>
-        <Col number={{ xs: 6, md: 4, lg: 3, xl: 2 }}>
+        <Col number={{ xs: 6, md: 3, xl: 2 }}>
           <Logo to="/" />
         </Col>
         <Col number={4} className={HiddenToXL}>
@@ -76,11 +73,11 @@ const Header = () => (
             Работаем ежедневно с 9 до 21
           </TelBlock>
         </Col>
-        <Col
-          number={{ xs: 6, md: 3 }}
-          className={cx(HiddenToSM, MarginLeftAuto)}
-        >
+        <Col number={{ xs: 6, md: 3 }} className={HiddenToSM}>
           <Button>оставить заявку</Button>
+        </Col>
+        <Col number={{ xs: 6, sm: 1 }} className={cx(ShowToMD, JustifyEnd)}>
+          <SquareButton>×</SquareButton>
         </Col>
       </RowItemsCentered>
     </Container>

@@ -5238,6 +5238,10 @@ table {
   padding: 8.33333%;
 }
 
+.p-full {
+  padding: 100%;
+}
+
 .py-0 {
   padding-top: 0;
   padding-bottom: 0;
@@ -5546,6 +5550,16 @@ table {
 .px-1\/6 {
   padding-left: 8.33333%;
   padding-right: 8.33333%;
+}
+
+.py-full {
+  padding-top: 100%;
+  padding-bottom: 100%;
+}
+
+.px-full {
+  padding-left: 100%;
+  padding-right: 100%;
 }
 
 .pt-0 {
@@ -6042,6 +6056,22 @@ table {
 
 .pl-1\/6 {
   padding-left: 8.33333%;
+}
+
+.pt-full {
+  padding-top: 100%;
+}
+
+.pr-full {
+  padding-right: 100%;
+}
+
+.pb-full {
+  padding-bottom: 100%;
+}
+
+.pl-full {
+  padding-left: 100%;
 }
 
 .pointer-events-none {
@@ -12354,6 +12384,10 @@ table {
     padding: 8.33333%;
   }
 
+  .sm\:p-full {
+    padding: 100%;
+  }
+
   .sm\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -12662,6 +12696,16 @@ table {
   .sm\:px-1\/6 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
+  }
+
+  .sm\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .sm\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .sm\:pt-0 {
@@ -13158,6 +13202,22 @@ table {
 
   .sm\:pl-1\/6 {
     padding-left: 8.33333%;
+  }
+
+  .sm\:pt-full {
+    padding-top: 100%;
+  }
+
+  .sm\:pr-full {
+    padding-right: 100%;
+  }
+
+  .sm\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .sm\:pl-full {
+    padding-left: 100%;
   }
 
   .sm\:pointer-events-none {
@@ -19459,6 +19519,10 @@ table {
     padding: 8.33333%;
   }
 
+  .md\:p-full {
+    padding: 100%;
+  }
+
   .md\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -19767,6 +19831,16 @@ table {
   .md\:px-1\/6 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
+  }
+
+  .md\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .md\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .md\:pt-0 {
@@ -20263,6 +20337,22 @@ table {
 
   .md\:pl-1\/6 {
     padding-left: 8.33333%;
+  }
+
+  .md\:pt-full {
+    padding-top: 100%;
+  }
+
+  .md\:pr-full {
+    padding-right: 100%;
+  }
+
+  .md\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .md\:pl-full {
+    padding-left: 100%;
   }
 
   .md\:pointer-events-none {
@@ -26564,6 +26654,10 @@ table {
     padding: 8.33333%;
   }
 
+  .lg\:p-full {
+    padding: 100%;
+  }
+
   .lg\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -26872,6 +26966,16 @@ table {
   .lg\:px-1\/6 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
+  }
+
+  .lg\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .lg\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .lg\:pt-0 {
@@ -27368,6 +27472,22 @@ table {
 
   .lg\:pl-1\/6 {
     padding-left: 8.33333%;
+  }
+
+  .lg\:pt-full {
+    padding-top: 100%;
+  }
+
+  .lg\:pr-full {
+    padding-right: 100%;
+  }
+
+  .lg\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .lg\:pl-full {
+    padding-left: 100%;
   }
 
   .lg\:pointer-events-none {
@@ -33669,6 +33789,10 @@ table {
     padding: 8.33333%;
   }
 
+  .xl\:p-full {
+    padding: 100%;
+  }
+
   .xl\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -33977,6 +34101,16 @@ table {
   .xl\:px-1\/6 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
+  }
+
+  .xl\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .xl\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .xl\:pt-0 {
@@ -34473,6 +34607,22 @@ table {
 
   .xl\:pl-1\/6 {
     padding-left: 8.33333%;
+  }
+
+  .xl\:pt-full {
+    padding-top: 100%;
+  }
+
+  .xl\:pr-full {
+    padding-right: 100%;
+  }
+
+  .xl\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .xl\:pl-full {
+    padding-left: 100%;
   }
 
   .xl\:pointer-events-none {
@@ -40774,6 +40924,10 @@ table {
     padding: 8.33333%;
   }
 
+  .screen\:p-full {
+    padding: 100%;
+  }
+
   .screen\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -41082,6 +41236,16 @@ table {
   .screen\:px-1\/6 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
+  }
+
+  .screen\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .screen\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .screen\:pt-0 {
@@ -41578,6 +41742,22 @@ table {
 
   .screen\:pl-1\/6 {
     padding-left: 8.33333%;
+  }
+
+  .screen\:pt-full {
+    padding-top: 100%;
+  }
+
+  .screen\:pr-full {
+    padding-right: 100%;
+  }
+
+  .screen\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .screen\:pl-full {
+    padding-left: 100%;
   }
 
   .screen\:pointer-events-none {
@@ -47879,6 +48059,10 @@ table {
     padding: 8.33333%;
   }
 
+  .desktop\:p-full {
+    padding: 100%;
+  }
+
   .desktop\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -48187,6 +48371,16 @@ table {
   .desktop\:px-1\/6 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
+  }
+
+  .desktop\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .desktop\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .desktop\:pt-0 {
@@ -48683,6 +48877,22 @@ table {
 
   .desktop\:pl-1\/6 {
     padding-left: 8.33333%;
+  }
+
+  .desktop\:pt-full {
+    padding-top: 100%;
+  }
+
+  .desktop\:pr-full {
+    padding-right: 100%;
+  }
+
+  .desktop\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .desktop\:pl-full {
+    padding-left: 100%;
   }
 
   .desktop\:pointer-events-none {

@@ -1,6 +1,6 @@
 /* global tw */
 import PropTypes from 'prop-types'
-import styled from 'react-emotion'
+import styled, { css } from 'react-emotion'
 
 const screens = {
   sm: '576px',
@@ -28,9 +28,9 @@ const Button = styled('button')`
     'bg-orange',
     'border-none',
     'cursor-pointer',
+    'h-q48',
     'outline-none',
-    'py-q12',
-    'md:py-q16',
+    'p-0',
     'rounded-full',
     'text-base',
     'uppercase',
@@ -72,4 +72,60 @@ const Row = styled('div')`
   ${tw(['flex', 'flex-row', '-mx-q16'])};
 `
 
-export { Button, Col, Container, Row }
+/* SquareButton */
+const SquareButton = styled('button')`
+  ${tw([
+    'bg-gray-light',
+    'border-none',
+    'cursor-pointer',
+    'flex-no-shrink',
+    'h-q36',
+    'sm:h-q48',
+    'outline-none',
+    'p-0',
+    'rounded-lg',
+    'text-base',
+    'uppercase',
+    'w-q36',
+    'sm:w-q48',
+  ])};
+`
+
+/* Utils */
+const HiddenToMD = css`
+  ${tw(['hidden', 'md:block'])};
+`
+
+const HiddenToSM = css`
+  ${tw(['hidden', 'sm:block'])};
+`
+
+const HiddenToXL = css`
+  ${tw(['hidden', 'xl:block'])};
+`
+
+const JustifyEnd = css`
+  ${tw(['flex', 'flex-row', 'justify-end'])};
+`
+
+const MarginLeftAuto = css`
+  ${tw(['ml-auto'])};
+`
+
+const ShowToMD = css`
+  ${tw(['block', 'md:hidden'])};
+`
+
+export {
+  Button,
+  Col,
+  Container,
+  HiddenToMD,
+  HiddenToSM,
+  HiddenToXL,
+  JustifyEnd,
+  MarginLeftAuto,
+  Row,
+  SquareButton,
+  ShowToMD,
+}
