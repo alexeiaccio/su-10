@@ -711,7 +711,7 @@ table {
 }
 
 .bg-orange {
-  background-color: #f6993f;
+  background-color: #ffab00;
 }
 
 .bg-orange-light {
@@ -1007,7 +1007,7 @@ table {
 }
 
 .group:hover .group-hover\:bg-orange {
-  background-color: #f6993f;
+  background-color: #ffab00;
 }
 
 .group:hover .group-hover\:bg-orange-light {
@@ -1303,7 +1303,7 @@ table {
 }
 
 .hover\:bg-orange:hover {
-  background-color: #f6993f;
+  background-color: #ffab00;
 }
 
 .hover\:bg-orange-light:hover {
@@ -1599,7 +1599,7 @@ table {
 }
 
 .active\:bg-orange:active {
-  background-color: #f6993f;
+  background-color: #ffab00;
 }
 
 .active\:bg-orange-light:active {
@@ -1967,7 +1967,7 @@ table {
 }
 
 .border-orange {
-  border-color: #f6993f;
+  border-color: #ffab00;
 }
 
 .border-orange-light {
@@ -2263,7 +2263,7 @@ table {
 }
 
 .hover\:border-orange:hover {
-  border-color: #f6993f;
+  border-color: #ffab00;
 }
 
 .hover\:border-orange-light:hover {
@@ -2559,7 +2559,7 @@ table {
 }
 
 .focus\:border-orange:focus {
-  border-color: #f6993f;
+  border-color: #ffab00;
 }
 
 .focus\:border-orange-light:focus {
@@ -3318,10 +3318,6 @@ table {
 
 .font-montserrat {
   font-family: Montserrat, sans-serif;
-}
-
-.font-cormorant {
-  font-family: Cormorant, serif;
 }
 
 .font-hairline {
@@ -4680,6 +4676,10 @@ table {
   margin: -0.75rem;
 }
 
+.-m-q16 {
+  margin: -1rem;
+}
+
 .-m-1\/47 {
   margin: -1.06353%;
 }
@@ -4780,6 +4780,16 @@ table {
 .-mx-q12 {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
+}
+
+.-my-q16 {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+
+.-mx-q16 {
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .-my-1\/47 {
@@ -4954,6 +4964,22 @@ table {
 
 .-ml-q12 {
   margin-left: -0.75rem;
+}
+
+.-mt-q16 {
+  margin-top: -1rem;
+}
+
+.-mr-q16 {
+  margin-right: -1rem;
+}
+
+.-mb-q16 {
+  margin-bottom: -1rem;
+}
+
+.-ml-q16 {
+  margin-left: -1rem;
 }
 
 .-mt-1\/47 {
@@ -6319,7 +6345,7 @@ table {
 }
 
 .text-orange {
-  color: #f6993f;
+  color: #ffab00;
 }
 
 .text-orange-light {
@@ -6615,7 +6641,7 @@ table {
 }
 
 .hover\:text-orange:hover {
-  color: #f6993f;
+  color: #ffab00;
 }
 
 .hover\:text-orange-light:hover {
@@ -6911,7 +6937,7 @@ table {
 }
 
 .focus\:text-orange:focus {
-  color: #f6993f;
+  color: #ffab00;
 }
 
 .focus\:text-orange-light:focus {
@@ -7626,12 +7652,52 @@ table {
   width: 12.5rem;
 }
 
-.w-1\/47 {
-  width: 2.12366%;
-}
-
 .w-1\/12 {
   width: 8.33333%;
+}
+
+.w-2\/12 {
+  width: 16.66667%;
+}
+
+.w-3\/12 {
+  width: 25%;
+}
+
+.w-4\/12 {
+  width: 33.33333%;
+}
+
+.w-5\/12 {
+  width: 41.66666%;
+}
+
+.w-6\/12 {
+  width: 50%;
+}
+
+.w-7\/12 {
+  width: 58.33333%;
+}
+
+.w-8\/12 {
+  width: 66.66667%;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-10\/12 {
+  width: 83.33333%;
+}
+
+.w-11\/12 {
+  width: 91.66666%;
+}
+
+.w-12\/12 {
+  width: 100%;
 }
 
 .z-0 {
@@ -7777,7 +7843,7 @@ table {
   }
 
   .sm\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .sm\:bg-orange-light {
@@ -8073,7 +8139,7 @@ table {
   }
 
   .group:hover .sm\:group-hover\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .group:hover .sm\:group-hover\:bg-orange-light {
@@ -8369,7 +8435,7 @@ table {
   }
 
   .sm\:hover\:bg-orange:hover {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .sm\:hover\:bg-orange-light:hover {
@@ -8665,7 +8731,7 @@ table {
   }
 
   .sm\:active\:bg-orange:active {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .sm\:active\:bg-orange-light:active {
@@ -9025,7 +9091,7 @@ table {
   }
 
   .sm\:border-orange {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .sm\:border-orange-light {
@@ -9321,7 +9387,7 @@ table {
   }
 
   .sm\:hover\:border-orange:hover {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .sm\:hover\:border-orange-light:hover {
@@ -9617,7 +9683,7 @@ table {
   }
 
   .sm\:focus\:border-orange:focus {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .sm\:focus\:border-orange-light:focus {
@@ -10376,10 +10442,6 @@ table {
 
   .sm\:font-montserrat {
     font-family: Montserrat, sans-serif;
-  }
-
-  .sm\:font-cormorant {
-    font-family: Cormorant, serif;
   }
 
   .sm\:font-hairline {
@@ -11738,6 +11800,10 @@ table {
     margin: -0.75rem;
   }
 
+  .sm\:-m-q16 {
+    margin: -1rem;
+  }
+
   .sm\:-m-1\/47 {
     margin: -1.06353%;
   }
@@ -11838,6 +11904,16 @@ table {
   .sm\:-mx-q12 {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
+  }
+
+  .sm\:-my-q16 {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+
+  .sm\:-mx-q16 {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .sm\:-my-1\/47 {
@@ -12012,6 +12088,22 @@ table {
 
   .sm\:-ml-q12 {
     margin-left: -0.75rem;
+  }
+
+  .sm\:-mt-q16 {
+    margin-top: -1rem;
+  }
+
+  .sm\:-mr-q16 {
+    margin-right: -1rem;
+  }
+
+  .sm\:-mb-q16 {
+    margin-bottom: -1rem;
+  }
+
+  .sm\:-ml-q16 {
+    margin-left: -1rem;
   }
 
   .sm\:-mt-1\/47 {
@@ -13357,7 +13449,7 @@ table {
   }
 
   .sm\:text-orange {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .sm\:text-orange-light {
@@ -13653,7 +13745,7 @@ table {
   }
 
   .sm\:hover\:text-orange:hover {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .sm\:hover\:text-orange-light:hover {
@@ -13949,7 +14041,7 @@ table {
   }
 
   .sm\:focus\:text-orange:focus {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .sm\:focus\:text-orange-light:focus {
@@ -14664,12 +14756,52 @@ table {
     width: 12.5rem;
   }
 
-  .sm\:w-1\/47 {
-    width: 2.12366%;
-  }
-
   .sm\:w-1\/12 {
     width: 8.33333%;
+  }
+
+  .sm\:w-2\/12 {
+    width: 16.66667%;
+  }
+
+  .sm\:w-3\/12 {
+    width: 25%;
+  }
+
+  .sm\:w-4\/12 {
+    width: 33.33333%;
+  }
+
+  .sm\:w-5\/12 {
+    width: 41.66666%;
+  }
+
+  .sm\:w-6\/12 {
+    width: 50%;
+  }
+
+  .sm\:w-7\/12 {
+    width: 58.33333%;
+  }
+
+  .sm\:w-8\/12 {
+    width: 66.66667%;
+  }
+
+  .sm\:w-9\/12 {
+    width: 75%;
+  }
+
+  .sm\:w-10\/12 {
+    width: 83.33333%;
+  }
+
+  .sm\:w-11\/12 {
+    width: 91.66666%;
+  }
+
+  .sm\:w-12\/12 {
+    width: 100%;
   }
 
   .sm\:z-0 {
@@ -14816,7 +14948,7 @@ table {
   }
 
   .md\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .md\:bg-orange-light {
@@ -15112,7 +15244,7 @@ table {
   }
 
   .group:hover .md\:group-hover\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .group:hover .md\:group-hover\:bg-orange-light {
@@ -15408,7 +15540,7 @@ table {
   }
 
   .md\:hover\:bg-orange:hover {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .md\:hover\:bg-orange-light:hover {
@@ -15704,7 +15836,7 @@ table {
   }
 
   .md\:active\:bg-orange:active {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .md\:active\:bg-orange-light:active {
@@ -16064,7 +16196,7 @@ table {
   }
 
   .md\:border-orange {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .md\:border-orange-light {
@@ -16360,7 +16492,7 @@ table {
   }
 
   .md\:hover\:border-orange:hover {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .md\:hover\:border-orange-light:hover {
@@ -16656,7 +16788,7 @@ table {
   }
 
   .md\:focus\:border-orange:focus {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .md\:focus\:border-orange-light:focus {
@@ -17415,10 +17547,6 @@ table {
 
   .md\:font-montserrat {
     font-family: Montserrat, sans-serif;
-  }
-
-  .md\:font-cormorant {
-    font-family: Cormorant, serif;
   }
 
   .md\:font-hairline {
@@ -18777,6 +18905,10 @@ table {
     margin: -0.75rem;
   }
 
+  .md\:-m-q16 {
+    margin: -1rem;
+  }
+
   .md\:-m-1\/47 {
     margin: -1.06353%;
   }
@@ -18877,6 +19009,16 @@ table {
   .md\:-mx-q12 {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
+  }
+
+  .md\:-my-q16 {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+
+  .md\:-mx-q16 {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .md\:-my-1\/47 {
@@ -19051,6 +19193,22 @@ table {
 
   .md\:-ml-q12 {
     margin-left: -0.75rem;
+  }
+
+  .md\:-mt-q16 {
+    margin-top: -1rem;
+  }
+
+  .md\:-mr-q16 {
+    margin-right: -1rem;
+  }
+
+  .md\:-mb-q16 {
+    margin-bottom: -1rem;
+  }
+
+  .md\:-ml-q16 {
+    margin-left: -1rem;
   }
 
   .md\:-mt-1\/47 {
@@ -20396,7 +20554,7 @@ table {
   }
 
   .md\:text-orange {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .md\:text-orange-light {
@@ -20692,7 +20850,7 @@ table {
   }
 
   .md\:hover\:text-orange:hover {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .md\:hover\:text-orange-light:hover {
@@ -20988,7 +21146,7 @@ table {
   }
 
   .md\:focus\:text-orange:focus {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .md\:focus\:text-orange-light:focus {
@@ -21703,12 +21861,52 @@ table {
     width: 12.5rem;
   }
 
-  .md\:w-1\/47 {
-    width: 2.12366%;
-  }
-
   .md\:w-1\/12 {
     width: 8.33333%;
+  }
+
+  .md\:w-2\/12 {
+    width: 16.66667%;
+  }
+
+  .md\:w-3\/12 {
+    width: 25%;
+  }
+
+  .md\:w-4\/12 {
+    width: 33.33333%;
+  }
+
+  .md\:w-5\/12 {
+    width: 41.66666%;
+  }
+
+  .md\:w-6\/12 {
+    width: 50%;
+  }
+
+  .md\:w-7\/12 {
+    width: 58.33333%;
+  }
+
+  .md\:w-8\/12 {
+    width: 66.66667%;
+  }
+
+  .md\:w-9\/12 {
+    width: 75%;
+  }
+
+  .md\:w-10\/12 {
+    width: 83.33333%;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.66666%;
+  }
+
+  .md\:w-12\/12 {
+    width: 100%;
   }
 
   .md\:z-0 {
@@ -21855,7 +22053,7 @@ table {
   }
 
   .lg\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .lg\:bg-orange-light {
@@ -22151,7 +22349,7 @@ table {
   }
 
   .group:hover .lg\:group-hover\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .group:hover .lg\:group-hover\:bg-orange-light {
@@ -22447,7 +22645,7 @@ table {
   }
 
   .lg\:hover\:bg-orange:hover {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .lg\:hover\:bg-orange-light:hover {
@@ -22743,7 +22941,7 @@ table {
   }
 
   .lg\:active\:bg-orange:active {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .lg\:active\:bg-orange-light:active {
@@ -23103,7 +23301,7 @@ table {
   }
 
   .lg\:border-orange {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .lg\:border-orange-light {
@@ -23399,7 +23597,7 @@ table {
   }
 
   .lg\:hover\:border-orange:hover {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .lg\:hover\:border-orange-light:hover {
@@ -23695,7 +23893,7 @@ table {
   }
 
   .lg\:focus\:border-orange:focus {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .lg\:focus\:border-orange-light:focus {
@@ -24454,10 +24652,6 @@ table {
 
   .lg\:font-montserrat {
     font-family: Montserrat, sans-serif;
-  }
-
-  .lg\:font-cormorant {
-    font-family: Cormorant, serif;
   }
 
   .lg\:font-hairline {
@@ -25816,6 +26010,10 @@ table {
     margin: -0.75rem;
   }
 
+  .lg\:-m-q16 {
+    margin: -1rem;
+  }
+
   .lg\:-m-1\/47 {
     margin: -1.06353%;
   }
@@ -25916,6 +26114,16 @@ table {
   .lg\:-mx-q12 {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
+  }
+
+  .lg\:-my-q16 {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+
+  .lg\:-mx-q16 {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .lg\:-my-1\/47 {
@@ -26090,6 +26298,22 @@ table {
 
   .lg\:-ml-q12 {
     margin-left: -0.75rem;
+  }
+
+  .lg\:-mt-q16 {
+    margin-top: -1rem;
+  }
+
+  .lg\:-mr-q16 {
+    margin-right: -1rem;
+  }
+
+  .lg\:-mb-q16 {
+    margin-bottom: -1rem;
+  }
+
+  .lg\:-ml-q16 {
+    margin-left: -1rem;
   }
 
   .lg\:-mt-1\/47 {
@@ -27435,7 +27659,7 @@ table {
   }
 
   .lg\:text-orange {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .lg\:text-orange-light {
@@ -27731,7 +27955,7 @@ table {
   }
 
   .lg\:hover\:text-orange:hover {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .lg\:hover\:text-orange-light:hover {
@@ -28027,7 +28251,7 @@ table {
   }
 
   .lg\:focus\:text-orange:focus {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .lg\:focus\:text-orange-light:focus {
@@ -28742,12 +28966,52 @@ table {
     width: 12.5rem;
   }
 
-  .lg\:w-1\/47 {
-    width: 2.12366%;
-  }
-
   .lg\:w-1\/12 {
     width: 8.33333%;
+  }
+
+  .lg\:w-2\/12 {
+    width: 16.66667%;
+  }
+
+  .lg\:w-3\/12 {
+    width: 25%;
+  }
+
+  .lg\:w-4\/12 {
+    width: 33.33333%;
+  }
+
+  .lg\:w-5\/12 {
+    width: 41.66666%;
+  }
+
+  .lg\:w-6\/12 {
+    width: 50%;
+  }
+
+  .lg\:w-7\/12 {
+    width: 58.33333%;
+  }
+
+  .lg\:w-8\/12 {
+    width: 66.66667%;
+  }
+
+  .lg\:w-9\/12 {
+    width: 75%;
+  }
+
+  .lg\:w-10\/12 {
+    width: 83.33333%;
+  }
+
+  .lg\:w-11\/12 {
+    width: 91.66666%;
+  }
+
+  .lg\:w-12\/12 {
+    width: 100%;
   }
 
   .lg\:z-0 {
@@ -28894,7 +29158,7 @@ table {
   }
 
   .xl\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .xl\:bg-orange-light {
@@ -29190,7 +29454,7 @@ table {
   }
 
   .group:hover .xl\:group-hover\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .group:hover .xl\:group-hover\:bg-orange-light {
@@ -29486,7 +29750,7 @@ table {
   }
 
   .xl\:hover\:bg-orange:hover {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .xl\:hover\:bg-orange-light:hover {
@@ -29782,7 +30046,7 @@ table {
   }
 
   .xl\:active\:bg-orange:active {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .xl\:active\:bg-orange-light:active {
@@ -30142,7 +30406,7 @@ table {
   }
 
   .xl\:border-orange {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .xl\:border-orange-light {
@@ -30438,7 +30702,7 @@ table {
   }
 
   .xl\:hover\:border-orange:hover {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .xl\:hover\:border-orange-light:hover {
@@ -30734,7 +30998,7 @@ table {
   }
 
   .xl\:focus\:border-orange:focus {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .xl\:focus\:border-orange-light:focus {
@@ -31493,10 +31757,6 @@ table {
 
   .xl\:font-montserrat {
     font-family: Montserrat, sans-serif;
-  }
-
-  .xl\:font-cormorant {
-    font-family: Cormorant, serif;
   }
 
   .xl\:font-hairline {
@@ -32855,6 +33115,10 @@ table {
     margin: -0.75rem;
   }
 
+  .xl\:-m-q16 {
+    margin: -1rem;
+  }
+
   .xl\:-m-1\/47 {
     margin: -1.06353%;
   }
@@ -32955,6 +33219,16 @@ table {
   .xl\:-mx-q12 {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
+  }
+
+  .xl\:-my-q16 {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+
+  .xl\:-mx-q16 {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .xl\:-my-1\/47 {
@@ -33129,6 +33403,22 @@ table {
 
   .xl\:-ml-q12 {
     margin-left: -0.75rem;
+  }
+
+  .xl\:-mt-q16 {
+    margin-top: -1rem;
+  }
+
+  .xl\:-mr-q16 {
+    margin-right: -1rem;
+  }
+
+  .xl\:-mb-q16 {
+    margin-bottom: -1rem;
+  }
+
+  .xl\:-ml-q16 {
+    margin-left: -1rem;
   }
 
   .xl\:-mt-1\/47 {
@@ -34474,7 +34764,7 @@ table {
   }
 
   .xl\:text-orange {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .xl\:text-orange-light {
@@ -34770,7 +35060,7 @@ table {
   }
 
   .xl\:hover\:text-orange:hover {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .xl\:hover\:text-orange-light:hover {
@@ -35066,7 +35356,7 @@ table {
   }
 
   .xl\:focus\:text-orange:focus {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .xl\:focus\:text-orange-light:focus {
@@ -35781,12 +36071,52 @@ table {
     width: 12.5rem;
   }
 
-  .xl\:w-1\/47 {
-    width: 2.12366%;
-  }
-
   .xl\:w-1\/12 {
     width: 8.33333%;
+  }
+
+  .xl\:w-2\/12 {
+    width: 16.66667%;
+  }
+
+  .xl\:w-3\/12 {
+    width: 25%;
+  }
+
+  .xl\:w-4\/12 {
+    width: 33.33333%;
+  }
+
+  .xl\:w-5\/12 {
+    width: 41.66666%;
+  }
+
+  .xl\:w-6\/12 {
+    width: 50%;
+  }
+
+  .xl\:w-7\/12 {
+    width: 58.33333%;
+  }
+
+  .xl\:w-8\/12 {
+    width: 66.66667%;
+  }
+
+  .xl\:w-9\/12 {
+    width: 75%;
+  }
+
+  .xl\:w-10\/12 {
+    width: 83.33333%;
+  }
+
+  .xl\:w-11\/12 {
+    width: 91.66666%;
+  }
+
+  .xl\:w-12\/12 {
+    width: 100%;
   }
 
   .xl\:z-0 {
@@ -35933,7 +36263,7 @@ table {
   }
 
   .screen\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .screen\:bg-orange-light {
@@ -36229,7 +36559,7 @@ table {
   }
 
   .group:hover .screen\:group-hover\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .group:hover .screen\:group-hover\:bg-orange-light {
@@ -36525,7 +36855,7 @@ table {
   }
 
   .screen\:hover\:bg-orange:hover {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .screen\:hover\:bg-orange-light:hover {
@@ -36821,7 +37151,7 @@ table {
   }
 
   .screen\:active\:bg-orange:active {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .screen\:active\:bg-orange-light:active {
@@ -37181,7 +37511,7 @@ table {
   }
 
   .screen\:border-orange {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .screen\:border-orange-light {
@@ -37477,7 +37807,7 @@ table {
   }
 
   .screen\:hover\:border-orange:hover {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .screen\:hover\:border-orange-light:hover {
@@ -37773,7 +38103,7 @@ table {
   }
 
   .screen\:focus\:border-orange:focus {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .screen\:focus\:border-orange-light:focus {
@@ -38532,10 +38862,6 @@ table {
 
   .screen\:font-montserrat {
     font-family: Montserrat, sans-serif;
-  }
-
-  .screen\:font-cormorant {
-    font-family: Cormorant, serif;
   }
 
   .screen\:font-hairline {
@@ -39894,6 +40220,10 @@ table {
     margin: -0.75rem;
   }
 
+  .screen\:-m-q16 {
+    margin: -1rem;
+  }
+
   .screen\:-m-1\/47 {
     margin: -1.06353%;
   }
@@ -39994,6 +40324,16 @@ table {
   .screen\:-mx-q12 {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
+  }
+
+  .screen\:-my-q16 {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+
+  .screen\:-mx-q16 {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .screen\:-my-1\/47 {
@@ -40168,6 +40508,22 @@ table {
 
   .screen\:-ml-q12 {
     margin-left: -0.75rem;
+  }
+
+  .screen\:-mt-q16 {
+    margin-top: -1rem;
+  }
+
+  .screen\:-mr-q16 {
+    margin-right: -1rem;
+  }
+
+  .screen\:-mb-q16 {
+    margin-bottom: -1rem;
+  }
+
+  .screen\:-ml-q16 {
+    margin-left: -1rem;
   }
 
   .screen\:-mt-1\/47 {
@@ -41513,7 +41869,7 @@ table {
   }
 
   .screen\:text-orange {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .screen\:text-orange-light {
@@ -41809,7 +42165,7 @@ table {
   }
 
   .screen\:hover\:text-orange:hover {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .screen\:hover\:text-orange-light:hover {
@@ -42105,7 +42461,7 @@ table {
   }
 
   .screen\:focus\:text-orange:focus {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .screen\:focus\:text-orange-light:focus {
@@ -42820,12 +43176,52 @@ table {
     width: 12.5rem;
   }
 
-  .screen\:w-1\/47 {
-    width: 2.12366%;
-  }
-
   .screen\:w-1\/12 {
     width: 8.33333%;
+  }
+
+  .screen\:w-2\/12 {
+    width: 16.66667%;
+  }
+
+  .screen\:w-3\/12 {
+    width: 25%;
+  }
+
+  .screen\:w-4\/12 {
+    width: 33.33333%;
+  }
+
+  .screen\:w-5\/12 {
+    width: 41.66666%;
+  }
+
+  .screen\:w-6\/12 {
+    width: 50%;
+  }
+
+  .screen\:w-7\/12 {
+    width: 58.33333%;
+  }
+
+  .screen\:w-8\/12 {
+    width: 66.66667%;
+  }
+
+  .screen\:w-9\/12 {
+    width: 75%;
+  }
+
+  .screen\:w-10\/12 {
+    width: 83.33333%;
+  }
+
+  .screen\:w-11\/12 {
+    width: 91.66666%;
+  }
+
+  .screen\:w-12\/12 {
+    width: 100%;
   }
 
   .screen\:z-0 {
@@ -42972,7 +43368,7 @@ table {
   }
 
   .desktop\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .desktop\:bg-orange-light {
@@ -43268,7 +43664,7 @@ table {
   }
 
   .group:hover .desktop\:group-hover\:bg-orange {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .group:hover .desktop\:group-hover\:bg-orange-light {
@@ -43564,7 +43960,7 @@ table {
   }
 
   .desktop\:hover\:bg-orange:hover {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .desktop\:hover\:bg-orange-light:hover {
@@ -43860,7 +44256,7 @@ table {
   }
 
   .desktop\:active\:bg-orange:active {
-    background-color: #f6993f;
+    background-color: #ffab00;
   }
 
   .desktop\:active\:bg-orange-light:active {
@@ -44220,7 +44616,7 @@ table {
   }
 
   .desktop\:border-orange {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .desktop\:border-orange-light {
@@ -44516,7 +44912,7 @@ table {
   }
 
   .desktop\:hover\:border-orange:hover {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .desktop\:hover\:border-orange-light:hover {
@@ -44812,7 +45208,7 @@ table {
   }
 
   .desktop\:focus\:border-orange:focus {
-    border-color: #f6993f;
+    border-color: #ffab00;
   }
 
   .desktop\:focus\:border-orange-light:focus {
@@ -45571,10 +45967,6 @@ table {
 
   .desktop\:font-montserrat {
     font-family: Montserrat, sans-serif;
-  }
-
-  .desktop\:font-cormorant {
-    font-family: Cormorant, serif;
   }
 
   .desktop\:font-hairline {
@@ -46933,6 +47325,10 @@ table {
     margin: -0.75rem;
   }
 
+  .desktop\:-m-q16 {
+    margin: -1rem;
+  }
+
   .desktop\:-m-1\/47 {
     margin: -1.06353%;
   }
@@ -47033,6 +47429,16 @@ table {
   .desktop\:-mx-q12 {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
+  }
+
+  .desktop\:-my-q16 {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+
+  .desktop\:-mx-q16 {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 
   .desktop\:-my-1\/47 {
@@ -47207,6 +47613,22 @@ table {
 
   .desktop\:-ml-q12 {
     margin-left: -0.75rem;
+  }
+
+  .desktop\:-mt-q16 {
+    margin-top: -1rem;
+  }
+
+  .desktop\:-mr-q16 {
+    margin-right: -1rem;
+  }
+
+  .desktop\:-mb-q16 {
+    margin-bottom: -1rem;
+  }
+
+  .desktop\:-ml-q16 {
+    margin-left: -1rem;
   }
 
   .desktop\:-mt-1\/47 {
@@ -48552,7 +48974,7 @@ table {
   }
 
   .desktop\:text-orange {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .desktop\:text-orange-light {
@@ -48848,7 +49270,7 @@ table {
   }
 
   .desktop\:hover\:text-orange:hover {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .desktop\:hover\:text-orange-light:hover {
@@ -49144,7 +49566,7 @@ table {
   }
 
   .desktop\:focus\:text-orange:focus {
-    color: #f6993f;
+    color: #ffab00;
   }
 
   .desktop\:focus\:text-orange-light:focus {
@@ -49859,12 +50281,52 @@ table {
     width: 12.5rem;
   }
 
-  .desktop\:w-1\/47 {
-    width: 2.12366%;
-  }
-
   .desktop\:w-1\/12 {
     width: 8.33333%;
+  }
+
+  .desktop\:w-2\/12 {
+    width: 16.66667%;
+  }
+
+  .desktop\:w-3\/12 {
+    width: 25%;
+  }
+
+  .desktop\:w-4\/12 {
+    width: 33.33333%;
+  }
+
+  .desktop\:w-5\/12 {
+    width: 41.66666%;
+  }
+
+  .desktop\:w-6\/12 {
+    width: 50%;
+  }
+
+  .desktop\:w-7\/12 {
+    width: 58.33333%;
+  }
+
+  .desktop\:w-8\/12 {
+    width: 66.66667%;
+  }
+
+  .desktop\:w-9\/12 {
+    width: 75%;
+  }
+
+  .desktop\:w-10\/12 {
+    width: 83.33333%;
+  }
+
+  .desktop\:w-11\/12 {
+    width: 91.66666%;
+  }
+
+  .desktop\:w-12\/12 {
+    width: 100%;
   }
 
   .desktop\:z-0 {
