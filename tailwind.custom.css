@@ -663,7 +663,7 @@ table {
 }
 
 .bg-grey-lightest {
-  background-color: #fafcfc;
+  background-color: #f9f9f9;
 }
 
 .bg-white {
@@ -959,7 +959,7 @@ table {
 }
 
 .group:hover .group-hover\:bg-grey-lightest {
-  background-color: #fafcfc;
+  background-color: #f9f9f9;
 }
 
 .group:hover .group-hover\:bg-white {
@@ -1255,7 +1255,7 @@ table {
 }
 
 .hover\:bg-grey-lightest:hover {
-  background-color: #fafcfc;
+  background-color: #f9f9f9;
 }
 
 .hover\:bg-white:hover {
@@ -1551,7 +1551,7 @@ table {
 }
 
 .active\:bg-grey-lightest:active {
-  background-color: #fafcfc;
+  background-color: #f9f9f9;
 }
 
 .active\:bg-white:active {
@@ -1919,7 +1919,7 @@ table {
 }
 
 .border-grey-lightest {
-  border-color: #fafcfc;
+  border-color: #f9f9f9;
 }
 
 .border-white {
@@ -2215,7 +2215,7 @@ table {
 }
 
 .hover\:border-grey-lightest:hover {
-  border-color: #fafcfc;
+  border-color: #f9f9f9;
 }
 
 .hover\:border-white:hover {
@@ -2511,7 +2511,7 @@ table {
 }
 
 .focus\:border-grey-lightest:focus {
-  border-color: #fafcfc;
+  border-color: #f9f9f9;
 }
 
 .focus\:border-white:focus {
@@ -4672,6 +4672,10 @@ table {
   margin: -1px;
 }
 
+.-m-q8 {
+  margin: -0.5rem;
+}
+
 .-m-q12 {
   margin: -0.75rem;
 }
@@ -4770,6 +4774,16 @@ table {
 .-mx-px {
   margin-left: -1px;
   margin-right: -1px;
+}
+
+.-my-q8 {
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.-mx-q8 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 .-my-q12 {
@@ -4948,6 +4962,22 @@ table {
 
 .-ml-px {
   margin-left: -1px;
+}
+
+.-mt-q8 {
+  margin-top: -0.5rem;
+}
+
+.-mr-q8 {
+  margin-right: -0.5rem;
+}
+
+.-mb-q8 {
+  margin-bottom: -0.5rem;
+}
+
+.-ml-q8 {
+  margin-left: -0.5rem;
 }
 
 .-mt-q12 {
@@ -6327,7 +6357,7 @@ table {
 }
 
 .text-grey-lightest {
-  color: #fafcfc;
+  color: #f9f9f9;
 }
 
 .text-white {
@@ -6623,7 +6653,7 @@ table {
 }
 
 .hover\:text-grey-lightest:hover {
-  color: #fafcfc;
+  color: #f9f9f9;
 }
 
 .hover\:text-white:hover {
@@ -6919,7 +6949,7 @@ table {
 }
 
 .focus\:text-grey-lightest:focus {
-  color: #fafcfc;
+  color: #f9f9f9;
 }
 
 .focus\:text-white:focus {
@@ -7825,7 +7855,7 @@ table {
   }
 
   .sm\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .sm\:bg-white {
@@ -8121,7 +8151,7 @@ table {
   }
 
   .group:hover .sm\:group-hover\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .group:hover .sm\:group-hover\:bg-white {
@@ -8417,7 +8447,7 @@ table {
   }
 
   .sm\:hover\:bg-grey-lightest:hover {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .sm\:hover\:bg-white:hover {
@@ -8713,7 +8743,7 @@ table {
   }
 
   .sm\:active\:bg-grey-lightest:active {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .sm\:active\:bg-white:active {
@@ -9073,7 +9103,7 @@ table {
   }
 
   .sm\:border-grey-lightest {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .sm\:border-white {
@@ -9369,7 +9399,7 @@ table {
   }
 
   .sm\:hover\:border-grey-lightest:hover {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .sm\:hover\:border-white:hover {
@@ -9665,7 +9695,7 @@ table {
   }
 
   .sm\:focus\:border-grey-lightest:focus {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .sm\:focus\:border-white:focus {
@@ -11826,6 +11856,10 @@ table {
     margin: -1px;
   }
 
+  .sm\:-m-q8 {
+    margin: -0.5rem;
+  }
+
   .sm\:-m-q12 {
     margin: -0.75rem;
   }
@@ -11924,6 +11958,16 @@ table {
   .sm\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .sm\:-my-q8 {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .sm\:-mx-q8 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
   .sm\:-my-q12 {
@@ -12102,6 +12146,22 @@ table {
 
   .sm\:-ml-px {
     margin-left: -1px;
+  }
+
+  .sm\:-mt-q8 {
+    margin-top: -0.5rem;
+  }
+
+  .sm\:-mr-q8 {
+    margin-right: -0.5rem;
+  }
+
+  .sm\:-mb-q8 {
+    margin-bottom: -0.5rem;
+  }
+
+  .sm\:-ml-q8 {
+    margin-left: -0.5rem;
   }
 
   .sm\:-mt-q12 {
@@ -13461,7 +13521,7 @@ table {
   }
 
   .sm\:text-grey-lightest {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .sm\:text-white {
@@ -13757,7 +13817,7 @@ table {
   }
 
   .sm\:hover\:text-grey-lightest:hover {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .sm\:hover\:text-white:hover {
@@ -14053,7 +14113,7 @@ table {
   }
 
   .sm\:focus\:text-grey-lightest:focus {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .sm\:focus\:text-white:focus {
@@ -14960,7 +15020,7 @@ table {
   }
 
   .md\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .md\:bg-white {
@@ -15256,7 +15316,7 @@ table {
   }
 
   .group:hover .md\:group-hover\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .group:hover .md\:group-hover\:bg-white {
@@ -15552,7 +15612,7 @@ table {
   }
 
   .md\:hover\:bg-grey-lightest:hover {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .md\:hover\:bg-white:hover {
@@ -15848,7 +15908,7 @@ table {
   }
 
   .md\:active\:bg-grey-lightest:active {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .md\:active\:bg-white:active {
@@ -16208,7 +16268,7 @@ table {
   }
 
   .md\:border-grey-lightest {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .md\:border-white {
@@ -16504,7 +16564,7 @@ table {
   }
 
   .md\:hover\:border-grey-lightest:hover {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .md\:hover\:border-white:hover {
@@ -16800,7 +16860,7 @@ table {
   }
 
   .md\:focus\:border-grey-lightest:focus {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .md\:focus\:border-white:focus {
@@ -18961,6 +19021,10 @@ table {
     margin: -1px;
   }
 
+  .md\:-m-q8 {
+    margin: -0.5rem;
+  }
+
   .md\:-m-q12 {
     margin: -0.75rem;
   }
@@ -19059,6 +19123,16 @@ table {
   .md\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .md\:-my-q8 {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .md\:-mx-q8 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
   .md\:-my-q12 {
@@ -19237,6 +19311,22 @@ table {
 
   .md\:-ml-px {
     margin-left: -1px;
+  }
+
+  .md\:-mt-q8 {
+    margin-top: -0.5rem;
+  }
+
+  .md\:-mr-q8 {
+    margin-right: -0.5rem;
+  }
+
+  .md\:-mb-q8 {
+    margin-bottom: -0.5rem;
+  }
+
+  .md\:-ml-q8 {
+    margin-left: -0.5rem;
   }
 
   .md\:-mt-q12 {
@@ -20596,7 +20686,7 @@ table {
   }
 
   .md\:text-grey-lightest {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .md\:text-white {
@@ -20892,7 +20982,7 @@ table {
   }
 
   .md\:hover\:text-grey-lightest:hover {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .md\:hover\:text-white:hover {
@@ -21188,7 +21278,7 @@ table {
   }
 
   .md\:focus\:text-grey-lightest:focus {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .md\:focus\:text-white:focus {
@@ -22095,7 +22185,7 @@ table {
   }
 
   .lg\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .lg\:bg-white {
@@ -22391,7 +22481,7 @@ table {
   }
 
   .group:hover .lg\:group-hover\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .group:hover .lg\:group-hover\:bg-white {
@@ -22687,7 +22777,7 @@ table {
   }
 
   .lg\:hover\:bg-grey-lightest:hover {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .lg\:hover\:bg-white:hover {
@@ -22983,7 +23073,7 @@ table {
   }
 
   .lg\:active\:bg-grey-lightest:active {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .lg\:active\:bg-white:active {
@@ -23343,7 +23433,7 @@ table {
   }
 
   .lg\:border-grey-lightest {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .lg\:border-white {
@@ -23639,7 +23729,7 @@ table {
   }
 
   .lg\:hover\:border-grey-lightest:hover {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .lg\:hover\:border-white:hover {
@@ -23935,7 +24025,7 @@ table {
   }
 
   .lg\:focus\:border-grey-lightest:focus {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .lg\:focus\:border-white:focus {
@@ -26096,6 +26186,10 @@ table {
     margin: -1px;
   }
 
+  .lg\:-m-q8 {
+    margin: -0.5rem;
+  }
+
   .lg\:-m-q12 {
     margin: -0.75rem;
   }
@@ -26194,6 +26288,16 @@ table {
   .lg\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .lg\:-my-q8 {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .lg\:-mx-q8 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
   .lg\:-my-q12 {
@@ -26372,6 +26476,22 @@ table {
 
   .lg\:-ml-px {
     margin-left: -1px;
+  }
+
+  .lg\:-mt-q8 {
+    margin-top: -0.5rem;
+  }
+
+  .lg\:-mr-q8 {
+    margin-right: -0.5rem;
+  }
+
+  .lg\:-mb-q8 {
+    margin-bottom: -0.5rem;
+  }
+
+  .lg\:-ml-q8 {
+    margin-left: -0.5rem;
   }
 
   .lg\:-mt-q12 {
@@ -27731,7 +27851,7 @@ table {
   }
 
   .lg\:text-grey-lightest {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .lg\:text-white {
@@ -28027,7 +28147,7 @@ table {
   }
 
   .lg\:hover\:text-grey-lightest:hover {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .lg\:hover\:text-white:hover {
@@ -28323,7 +28443,7 @@ table {
   }
 
   .lg\:focus\:text-grey-lightest:focus {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .lg\:focus\:text-white:focus {
@@ -29230,7 +29350,7 @@ table {
   }
 
   .xl\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .xl\:bg-white {
@@ -29526,7 +29646,7 @@ table {
   }
 
   .group:hover .xl\:group-hover\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .group:hover .xl\:group-hover\:bg-white {
@@ -29822,7 +29942,7 @@ table {
   }
 
   .xl\:hover\:bg-grey-lightest:hover {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .xl\:hover\:bg-white:hover {
@@ -30118,7 +30238,7 @@ table {
   }
 
   .xl\:active\:bg-grey-lightest:active {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .xl\:active\:bg-white:active {
@@ -30478,7 +30598,7 @@ table {
   }
 
   .xl\:border-grey-lightest {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .xl\:border-white {
@@ -30774,7 +30894,7 @@ table {
   }
 
   .xl\:hover\:border-grey-lightest:hover {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .xl\:hover\:border-white:hover {
@@ -31070,7 +31190,7 @@ table {
   }
 
   .xl\:focus\:border-grey-lightest:focus {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .xl\:focus\:border-white:focus {
@@ -33231,6 +33351,10 @@ table {
     margin: -1px;
   }
 
+  .xl\:-m-q8 {
+    margin: -0.5rem;
+  }
+
   .xl\:-m-q12 {
     margin: -0.75rem;
   }
@@ -33329,6 +33453,16 @@ table {
   .xl\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .xl\:-my-q8 {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .xl\:-mx-q8 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
   .xl\:-my-q12 {
@@ -33507,6 +33641,22 @@ table {
 
   .xl\:-ml-px {
     margin-left: -1px;
+  }
+
+  .xl\:-mt-q8 {
+    margin-top: -0.5rem;
+  }
+
+  .xl\:-mr-q8 {
+    margin-right: -0.5rem;
+  }
+
+  .xl\:-mb-q8 {
+    margin-bottom: -0.5rem;
+  }
+
+  .xl\:-ml-q8 {
+    margin-left: -0.5rem;
   }
 
   .xl\:-mt-q12 {
@@ -34866,7 +35016,7 @@ table {
   }
 
   .xl\:text-grey-lightest {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .xl\:text-white {
@@ -35162,7 +35312,7 @@ table {
   }
 
   .xl\:hover\:text-grey-lightest:hover {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .xl\:hover\:text-white:hover {
@@ -35458,7 +35608,7 @@ table {
   }
 
   .xl\:focus\:text-grey-lightest:focus {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .xl\:focus\:text-white:focus {
@@ -36365,7 +36515,7 @@ table {
   }
 
   .screen\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .screen\:bg-white {
@@ -36661,7 +36811,7 @@ table {
   }
 
   .group:hover .screen\:group-hover\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .group:hover .screen\:group-hover\:bg-white {
@@ -36957,7 +37107,7 @@ table {
   }
 
   .screen\:hover\:bg-grey-lightest:hover {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .screen\:hover\:bg-white:hover {
@@ -37253,7 +37403,7 @@ table {
   }
 
   .screen\:active\:bg-grey-lightest:active {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .screen\:active\:bg-white:active {
@@ -37613,7 +37763,7 @@ table {
   }
 
   .screen\:border-grey-lightest {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .screen\:border-white {
@@ -37909,7 +38059,7 @@ table {
   }
 
   .screen\:hover\:border-grey-lightest:hover {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .screen\:hover\:border-white:hover {
@@ -38205,7 +38355,7 @@ table {
   }
 
   .screen\:focus\:border-grey-lightest:focus {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .screen\:focus\:border-white:focus {
@@ -40366,6 +40516,10 @@ table {
     margin: -1px;
   }
 
+  .screen\:-m-q8 {
+    margin: -0.5rem;
+  }
+
   .screen\:-m-q12 {
     margin: -0.75rem;
   }
@@ -40464,6 +40618,16 @@ table {
   .screen\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .screen\:-my-q8 {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .screen\:-mx-q8 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
   .screen\:-my-q12 {
@@ -40642,6 +40806,22 @@ table {
 
   .screen\:-ml-px {
     margin-left: -1px;
+  }
+
+  .screen\:-mt-q8 {
+    margin-top: -0.5rem;
+  }
+
+  .screen\:-mr-q8 {
+    margin-right: -0.5rem;
+  }
+
+  .screen\:-mb-q8 {
+    margin-bottom: -0.5rem;
+  }
+
+  .screen\:-ml-q8 {
+    margin-left: -0.5rem;
   }
 
   .screen\:-mt-q12 {
@@ -42001,7 +42181,7 @@ table {
   }
 
   .screen\:text-grey-lightest {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .screen\:text-white {
@@ -42297,7 +42477,7 @@ table {
   }
 
   .screen\:hover\:text-grey-lightest:hover {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .screen\:hover\:text-white:hover {
@@ -42593,7 +42773,7 @@ table {
   }
 
   .screen\:focus\:text-grey-lightest:focus {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .screen\:focus\:text-white:focus {
@@ -43500,7 +43680,7 @@ table {
   }
 
   .desktop\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .desktop\:bg-white {
@@ -43796,7 +43976,7 @@ table {
   }
 
   .group:hover .desktop\:group-hover\:bg-grey-lightest {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .group:hover .desktop\:group-hover\:bg-white {
@@ -44092,7 +44272,7 @@ table {
   }
 
   .desktop\:hover\:bg-grey-lightest:hover {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .desktop\:hover\:bg-white:hover {
@@ -44388,7 +44568,7 @@ table {
   }
 
   .desktop\:active\:bg-grey-lightest:active {
-    background-color: #fafcfc;
+    background-color: #f9f9f9;
   }
 
   .desktop\:active\:bg-white:active {
@@ -44748,7 +44928,7 @@ table {
   }
 
   .desktop\:border-grey-lightest {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .desktop\:border-white {
@@ -45044,7 +45224,7 @@ table {
   }
 
   .desktop\:hover\:border-grey-lightest:hover {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .desktop\:hover\:border-white:hover {
@@ -45340,7 +45520,7 @@ table {
   }
 
   .desktop\:focus\:border-grey-lightest:focus {
-    border-color: #fafcfc;
+    border-color: #f9f9f9;
   }
 
   .desktop\:focus\:border-white:focus {
@@ -47501,6 +47681,10 @@ table {
     margin: -1px;
   }
 
+  .desktop\:-m-q8 {
+    margin: -0.5rem;
+  }
+
   .desktop\:-m-q12 {
     margin: -0.75rem;
   }
@@ -47599,6 +47783,16 @@ table {
   .desktop\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .desktop\:-my-q8 {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .desktop\:-mx-q8 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
   .desktop\:-my-q12 {
@@ -47777,6 +47971,22 @@ table {
 
   .desktop\:-ml-px {
     margin-left: -1px;
+  }
+
+  .desktop\:-mt-q8 {
+    margin-top: -0.5rem;
+  }
+
+  .desktop\:-mr-q8 {
+    margin-right: -0.5rem;
+  }
+
+  .desktop\:-mb-q8 {
+    margin-bottom: -0.5rem;
+  }
+
+  .desktop\:-ml-q8 {
+    margin-left: -0.5rem;
   }
 
   .desktop\:-mt-q12 {
@@ -49136,7 +49346,7 @@ table {
   }
 
   .desktop\:text-grey-lightest {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .desktop\:text-white {
@@ -49432,7 +49642,7 @@ table {
   }
 
   .desktop\:hover\:text-grey-lightest:hover {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .desktop\:hover\:text-white:hover {
@@ -49728,7 +49938,7 @@ table {
   }
 
   .desktop\:focus\:text-grey-lightest:focus {
-    color: #fafcfc;
+    color: #f9f9f9;
   }
 
   .desktop\:focus\:text-white:focus {

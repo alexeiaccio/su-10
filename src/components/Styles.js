@@ -2,6 +2,9 @@
 import PropTypes from 'prop-types'
 import styled, { css } from 'react-emotion'
 
+import MenuSvg from '../assets/menu.svg'
+import TelSvg from '../assets/tel.svg'
+
 const screens = {
   sm: '576px',
   md: '768px',
@@ -28,20 +31,25 @@ const Button = styled('button')`
     'bg-orange',
     'border-none',
     'cursor-pointer',
+    'font-bold',
     'h-q48',
     'outline-none',
     'p-0',
-    'rounded-full',
-    'text-base',
+    'text-sm',
     'tracking-button',
     'uppercase',
     'w-full',
   ])};
+  box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+  &:active {
+    transform: translate(-2px, 2px);
+    box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.3);
+  }
 `
 
 /* Col */
 const Col = styled('div')`
-  ${tw(['px-q16'])};
+  ${tw(['px-q8', 'md:px-q16'])};
   ${({ number }) => (number ? makeWidths(number) : tw(['w-auto']))};
 `
 
@@ -68,15 +76,26 @@ const Container = styled('div')`
   box-sizing: border-box;
 `
 
+/* Heading */
+const H1 = styled('h1')`
+  ${tw(['font-normal', 'mb-0', 'mt-q72', 'text-4xl', 'text-center'])};
+`
+
+const H2 = styled('h2')`
+  ${tw(['font-normal', 'mb-0', 'mt-q48', 'text-2xl', 'text-center'])};
+`
+
 /* Row */
 const Row = styled('div')`
-  ${tw(['flex', 'flex-row', '-mx-q16'])};
+  ${tw(['flex', 'flex-row', '-mx-q8', 'md:-mx-q16'])};
 `
 
 /* SquareButton */
 const SquareButton = styled('button')`
   ${tw([
-    'bg-gray-light',
+    'bg-center',
+    'bg-no-repeat',
+    'bg-white',
     'border-none',
     'cursor-pointer',
     'flex-no-shrink',
@@ -84,7 +103,6 @@ const SquareButton = styled('button')`
     'sm:h-q48',
     'outline-none',
     'p-0',
-    'rounded-lg',
     'text-base',
     'uppercase',
     'w-q36',
@@ -93,6 +111,10 @@ const SquareButton = styled('button')`
 `
 
 /* Utils */
+const HiddenToLG = css`
+  ${tw(['hidden', 'lg:block'])};
+`
+
 const HiddenToMD = css`
   ${tw(['hidden', 'md:block'])};
 `
@@ -105,28 +127,46 @@ const HiddenToXL = css`
   ${tw(['hidden', 'xl:block'])};
 `
 
+const JustifyCenter = css`
+  ${tw(['flex', 'flex-no-shrink', 'flex-row', 'justify-center'])};
+`
+
 const JustifyEnd = css`
   ${tw(['flex', 'flex-row', 'justify-end'])};
 `
 
-const MarginLeftAuto = css`
-  ${tw(['ml-auto'])};
+const MarginLeftTwoCol = css`
+  ${tw(['ml-1/6', 'sm:ml-auto'])};
+`
+
+const MenuIcon = css`
+  background-image: url(${MenuSvg});
 `
 
 const ShowToMD = css`
   ${tw(['block', 'md:hidden'])};
 `
 
+const TelIcon = css`
+  background-image: url(${TelSvg});
+`
+
 export {
   Button,
   Col,
   Container,
+  H1,
+  H2,
   HiddenToMD,
+  HiddenToLG,
   HiddenToSM,
   HiddenToXL,
+  JustifyCenter,
   JustifyEnd,
-  MarginLeftAuto,
+  MarginLeftTwoCol,
+  MenuIcon,
   Row,
   SquareButton,
   ShowToMD,
+  TelIcon,
 }

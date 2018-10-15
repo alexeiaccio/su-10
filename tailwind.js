@@ -54,7 +54,7 @@ const colors = {
   grey: '#9babb4',
   'grey-light': '#dae4e9',
   'grey-lighter': '#edefef',
-  'grey-lightest': '#fafcfc',
+  'grey-lightest': '#f9f9f9',
   white: '#ffffff',
 
   'red-darkest': '#590624',
@@ -794,6 +794,7 @@ module.exports = {
     '6': '1.5rem',
     '8': '2rem',
     // Custom
+    q8: '0.5rem',
     q12: '0.75rem',
     q16: '1rem',
     '1/47': '1.06353%',
