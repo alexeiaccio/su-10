@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { injectGlobal } from 'emotion'
-
+import styled from 'react-emotion'
 import Header from './Header'
 /* import Seo from './Seo' */
 
@@ -15,13 +15,15 @@ injectGlobal`
   }
 `
 
+const Wrapper = styled('div')``
+
 const Layout = ({ children }) => (
-  <React.Fragment>
+  <>
     {/* <Seo /> */}
     <Header />
-    <div>{children}</div>
+    <Wrapper>{children}</Wrapper>
     {/* Footer component goes here */}
-  </React.Fragment>
+  </>
 )
 
 Layout.propTypes = {

@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Breadcrumbs from '../components/Breadcrumbs'
+import HTMLContent from '../components/Content'
 import Layout from '../components/Layout'
 import PriceList from '../components/PriceList'
-import { Container, H1 } from '../components/Styles'
+import { Container, Description, H1 } from '../components/Styles'
 /* import Seo from '../components/Seo'
 
 const seo = {
@@ -18,6 +19,9 @@ const ProductPage = ({ data, location }) => (
     <Breadcrumbs {...{ location }} />
     <Container>
       <H1>{data.product.data.title.text}</H1>
+      <Description>
+        <HTMLContent content={data.product.data.description.text} />
+      </Description>
       <PriceList data={data.product.data} {...{ location }} />
     </Container>
   </Layout>
@@ -54,7 +58,7 @@ export const pageQuery = graphql`
           text
         }
         description {
-          text
+          html
         }
         pricetitle {
           text

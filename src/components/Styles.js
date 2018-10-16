@@ -72,8 +72,16 @@ Col.defaultProps = {
 
 /* Container */
 const Container = styled('div')`
-  ${tw(['mx-auto', 'max-w-container', 'px-q16', 'w-full'])};
+  ${tw(['mx-auto', 'max-w-container', 'px-q16', 'relative', 'w-full'])};
   box-sizing: border-box;
+`
+
+/* Description */
+const Description = styled('div')`
+  ${tw(['leading-normal', 'my-q72', 'text-base', 'text-center'])};
+  & p {
+    ${tw(['mb-q48'])};
+  }
 `
 
 /* Heading */
@@ -111,6 +119,10 @@ const SquareButton = styled('button')`
 `
 
 /* Utils */
+const HiddenFromMD = css`
+  ${tw(['md:hidden'])};
+`
+
 const HiddenToLG = css`
   ${tw(['hidden', 'lg:block'])};
 `
@@ -135,6 +147,10 @@ const JustifyEnd = css`
   ${tw(['flex', 'flex-row', 'justify-end'])};
 `
 
+const marginBottomToMD = css`
+  ${tw(['mb-q24', 'md:mb-0'])};
+`
+
 const MarginLeftTwoCol = css`
   ${tw(['ml-1/6', 'sm:ml-auto'])};
 `
@@ -151,22 +167,35 @@ const TelIcon = css`
   background-image: url(${TelSvg});
 `
 
+const TextBase = css`
+  ${tw(['text-base'])};
+`
+
+const WrapToMD = css`
+  ${tw(['flex-wrap', 'md:flex-no-wrap'])};
+`
+
 export {
   Button,
   Col,
   Container,
+  Description,
   H1,
   H2,
+  HiddenFromMD,
   HiddenToMD,
   HiddenToLG,
   HiddenToSM,
   HiddenToXL,
   JustifyCenter,
   JustifyEnd,
+  marginBottomToMD,
   MarginLeftTwoCol,
   MenuIcon,
   Row,
   SquareButton,
   ShowToMD,
   TelIcon,
+  TextBase,
+  WrapToMD,
 }

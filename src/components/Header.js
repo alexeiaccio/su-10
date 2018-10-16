@@ -44,7 +44,7 @@ const RowItemsCentered = styled(Row)`
 `
 
 const StyledHeader = styled('header')`
-  ${tw(['bg-white', 'py-q20'])};
+  ${tw(['bg-white', 'py-q20', 'relative', 'z-50'])};
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 `
 

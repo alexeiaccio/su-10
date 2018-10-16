@@ -84,7 +84,7 @@ const colors = {
   'green-darkest': '#03402e',
   'green-darker': '#067352',
   'green-dark': '#08a676',
-  green: '#0cf3ad',
+  green: '#6fcf97',
   'green-light': '#0cf2ad',
   'green-lighter': '#41f3bd',
   'green-lightest': '#aff4df',
@@ -487,6 +487,7 @@ module.exports = {
     full: '100%',
     screen: '100vw',
     // Custom
+    q2: '0.125rem',
     q4: '0.25rem',
     q8: '0.5rem',
     q12: '0.75rem',
@@ -556,6 +557,7 @@ module.exports = {
     screen: '100vh',
     // Custom
     '1/2': '50%',
+    q2: '0.125rem',
     q4: '0.25rem',
     q8: '0.5rem',
     q12: '0.75rem',
@@ -692,6 +694,7 @@ module.exports = {
     '6': '1.5rem',
     '8': '2rem',
     // Custom
+    q2: '0.125rem',
     q4: '0.25rem',
     q8: '0.5rem',
     q12: '0.75rem',
@@ -744,6 +747,7 @@ module.exports = {
     '6': '1.5rem',
     '8': '2rem',
     // Custom
+    q2: '0.125rem',
     q4: '0.25rem',
     q8: '0.5rem',
     q12: '0.75rem',
@@ -873,6 +877,7 @@ module.exports = {
     '0': '0',
     '25': '.25',
     '50': '.5',
+    '60': '.6',
     '75': '.75',
     '100': '1',
   },

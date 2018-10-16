@@ -6,7 +6,7 @@ import styled from 'react-emotion'
 import TableRow from './TableRow'
 
 const StyledTable = styled('table')`
-  ${tw(['border-collapse', 'my-q36', 'table-auto', 'text-sm', 'w-full'])};
+  ${tw(['border-collapse', 'my-q48', 'table-auto', 'text-sm', 'w-full'])};
 `
 
 const TableWrapper = styled('div')`
