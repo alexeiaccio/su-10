@@ -40,13 +40,13 @@ module.exports = {
     utilsBackgroundColor,
   },
   plugins: [
-    /* {
-      resolve: 'gatsby-plugin-google-analytics',
+    {
+      resolve: 'gatsby-source-prismic',
       options: {
-        trackingId: gaId,
-        head: false, // put GA in the <head> for optimal tracking
+        repositoryName: 'su-10',
+        accessToken: process.env.PRICMIC_TOKEN,
       },
-    }, */
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -57,13 +57,6 @@ module.exports = {
         background_color: utilsBackgroundColor,
         display: 'minimal-ui',
         icon: utilsIcon, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: 'gatsby-source-prismic',
-      options: {
-        repositoryName: 'su-10',
-        accessToken: process.env.PRICMIC_TOKEN,
       },
     },
     'gatsby-plugin-react-helmet',

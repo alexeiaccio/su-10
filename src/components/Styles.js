@@ -53,6 +53,7 @@ const Button = styled('button')`
 const Col = styled('div')`
   ${tw(['px-q8', 'md:px-q16'])};
   ${({ number }) => (number ? makeWidths(number) : tw(['w-auto']))};
+  box-sizing: border-box;
 `
 
 Col.propTypes = {

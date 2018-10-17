@@ -140,16 +140,6 @@ Slider.propTypes = {
           }),
         ]).isRequired,
       }),
-      pointicon: PropTypes.shape({
-        localFile: PropTypes.oneOfType([
-          PropTypes.shape({
-            relativePath: PropTypes.string.isRequired,
-          }),
-          PropTypes.shape({
-            absolutePath: PropTypes.string.isRequired,
-          }),
-        ]).isRequired,
-      }),
     }).isRequired
   ).isRequired,
 }

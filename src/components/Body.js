@@ -6,6 +6,7 @@ import styled from 'react-emotion'
 import s4 from 'node-uuid'
 
 import HTMLContent from './Content'
+import Points from './Points'
 import Slider from './Slider'
 
 const Text = styled('div')`
@@ -36,6 +37,7 @@ const Body = ({ body }) => (
             <Slider items={items} />
           </Text>
         )}
+        {__typename === 'PrismicHomepageBodyPoints' && <Points items={items} />}
       </div>
     ))}
   </section>
@@ -92,14 +94,10 @@ Body.propTypes = {
             ]).isRequired,
           }),
           pointicon: PropTypes.shape({
-            localFile: PropTypes.oneOfType([
-              PropTypes.shape({
-                relativePath: PropTypes.string.isRequired,
-              }),
-              PropTypes.shape({
-                absolutePath: PropTypes.string.isRequired,
-              }),
-            ]).isRequired,
+            url: PropTypes.string.isRequired,
+          }),
+          pointtext: PropTypes.shape({
+            html: PropTypes.string.isRequired,
           }),
         }).isRequired
       ),
@@ -143,10 +141,10 @@ export const query = graphql`
         ... on PrismicHomepageBodyPoints {
           items {
             pointicon {
-              localFile {
-                relativePath
-                absolutePath
-              }
+              url
+            }
+            pointtext {
+              html
             }
           }
         }

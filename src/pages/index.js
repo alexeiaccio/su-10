@@ -191,14 +191,10 @@ IndexPage.propTypes = {
               ]).isRequired,
             }),
             pointicon: PropTypes.shape({
-              localFile: PropTypes.oneOfType([
-                PropTypes.shape({
-                  relativePath: PropTypes.string.isRequired,
-                }),
-                PropTypes.shape({
-                  absolutePath: PropTypes.string.isRequired,
-                }),
-              ]).isRequired,
+              url: PropTypes.string.isRequired,
+            }),
+            pointtext: PropTypes.shape({
+              html: PropTypes.string.isRequired,
             }),
           }).isRequired
         ),
