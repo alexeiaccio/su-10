@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { injectGlobal } from 'emotion'
 import styled from 'react-emotion'
 
+import Body from './Body'
 import Footer from './Footer'
 import Header from './Header'
 /* import Seo from './Seo' */
@@ -24,7 +25,7 @@ const Layout = ({ data, children }) => (
     {/* <Seo /> */}
     <Header tel={data.footertel} />
     <Wrapper>{children}</Wrapper>
-
+    <Body body={data.body.slice(1)} />
     <Footer {...{ data }} />
   </>
 )

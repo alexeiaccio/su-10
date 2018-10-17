@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import styled, { cx } from 'react-emotion'
 
 import Banner from '../components/Banner'
+import Body from '../components/Body'
 import HTMLContent from '../components/Content'
 import Layout from '../components/Layout'
 import Products from '../components/Products'
@@ -42,7 +43,7 @@ const H1 = styled('h1')`
 `
 
 const IndexPage = ({ data }) => {
-  const { image, title, description, products } = data.index.data
+  const { body, image, title, description, products } = data.index.data
   return (
     <Layout data={data.index.data}>
       {/* <Seo {...seo} pathname={location.pathname} /> */}
@@ -57,6 +58,7 @@ const IndexPage = ({ data }) => {
           <HTMLContent content={description.html} />
         </Description>
         <Products products={products} />
+        <Body body={body.slice(0, 1)} />
       </Container>
     </Layout>
   )
@@ -139,6 +141,69 @@ IndexPage.propTypes = {
         }).isRequired,
       }).isRequired,
     }).isRequired,
+    body: PropTypes.arrayOf(
+      PropTypes.shape({
+        __typename: PropTypes.oneOf([
+          'PrismicHomepageBodyText',
+          'PrismicHomepageBodyImageGallery',
+          'PrismicHomepageBodyPoints',
+          'PrismicHomepageBodyForm',
+        ]).isRequired,
+        primary: PropTypes.shape({
+          text: PropTypes.shape({
+            html: PropTypes.string.isRequired,
+          }),
+          gallerytitle: PropTypes.shape({
+            text: PropTypes.string.isRequired,
+          }),
+          formtext: PropTypes.shape({
+            html: PropTypes.string.isRequired,
+          }),
+          formimage: PropTypes.shape({
+            localFile: PropTypes.oneOfType([
+              PropTypes.shape({
+                childImageSharp: PropTypes.shape({
+                  fluid: PropTypes.shape({
+                    src: PropTypes.string.isRequired,
+                  }).isRequired,
+                }).isRequired,
+              }),
+              PropTypes.shape({
+                absolutePath: PropTypes.string.isRequired,
+              }),
+            ]).isRequired,
+          }),
+        }),
+        items: PropTypes.arrayOf(
+          PropTypes.shape({
+            galleryimage: PropTypes.shape({
+              localFile: PropTypes.oneOfType([
+                PropTypes.shape({
+                  childImageSharp: PropTypes.shape({
+                    fluid: PropTypes.shape({
+                      src: PropTypes.string.isRequired,
+                    }).isRequired,
+                  }).isRequired,
+                }),
+                PropTypes.shape({
+                  absolutePath: PropTypes.string.isRequired,
+                }),
+              ]).isRequired,
+            }),
+            pointicon: PropTypes.shape({
+              localFile: PropTypes.oneOfType([
+                PropTypes.shape({
+                  relativePath: PropTypes.string.isRequired,
+                }),
+                PropTypes.shape({
+                  absolutePath: PropTypes.string.isRequired,
+                }),
+              ]).isRequired,
+            }),
+          }).isRequired
+        ),
+      }).isRequired
+    ),
   }).isRequired,
 }
 
@@ -149,6 +214,7 @@ export const pageQuery = graphql`
     index: prismicHomepage {
       ...BannerImage
       ...ProductsFragment
+      ...BodyFragment
       ...FooterFragment
       data {
         title {

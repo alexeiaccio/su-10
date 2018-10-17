@@ -8,7 +8,7 @@ import HTMLContent from './Content'
 import Img from './Img'
 import { Col, Container, HeaderDescription, Logo, Row, TelIcon } from './Styles'
 
-const StyledFooter = styled('div')`
+const StyledFooter = styled('footer')`
   ${tw(['my-q60'])};
 `
 
