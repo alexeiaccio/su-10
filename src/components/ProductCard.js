@@ -20,19 +20,15 @@ const Card = styled('div')`
     'h-full',
     'rounded-sm',
   ])};
-  box-shadow: 0 0 26px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.36);
+  }
 `
 
 const Content = styled('div')`
-  ${tw([
-    'flex',
-    'flex-col',
-    'items-center',
-    'pb-q36',
-    'px-q48',
-    'relative',
-    'z-10',
-  ])};
+  ${tw(['flex', 'flex-col', 'items-center', 'pb-q36', 'relative', 'z-10'])};
 `
 
 const Description = styled('div')`
@@ -101,6 +97,22 @@ const ImgStyles = css`
   ${tw(['pin'])};
 `
 
+const ButtonContainer = styled('dib')`
+  ${tw(['px-q36', 'w-full'])};
+  box-sizing: border-box;
+`
+
+const linkStyles = css`
+  ${tw([
+    'flex',
+    'flex-col',
+    'items-center',
+    'no-underline',
+    'text-black',
+    'w-full',
+  ])};
+`
+
 const PropductCard = ({
   product: {
     productlink,
@@ -125,9 +137,13 @@ const PropductCard = ({
       </Content>
     </Wrapper>
     <Content>
-      <RoundIcon />
-      <Price>{`от ${productprice} руб./м3`}</Price>
-      <Button>заказать</Button>
+      <Link className={linkStyles} to={productlink.uid}>
+        <RoundIcon />
+        <Price>{`от ${productprice} руб./м3`}</Price>
+      </Link>
+      <ButtonContainer>
+        <Button>заказать</Button>
+      </ButtonContainer>
     </Content>
   </Card>
 )

@@ -52,7 +52,7 @@ const Button = styled('button')`
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: translate(2px, -2px);
-    box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.3);
   }
   &:active {
     transform: translate(-1px, 1px);
