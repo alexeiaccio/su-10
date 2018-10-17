@@ -127,18 +127,14 @@ Slider.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       galleryimage: PropTypes.shape({
-        localFile: PropTypes.oneOfType([
-          PropTypes.shape({
-            childImageSharp: PropTypes.shape({
-              fluid: PropTypes.shape({
-                src: PropTypes.string.isRequired,
-              }).isRequired,
+        url: PropTypes.string,
+        localFile: PropTypes.shape({
+          childImageSharp: PropTypes.shape({
+            fluid: PropTypes.shape({
+              src: PropTypes.string.isRequired,
             }).isRequired,
-          }),
-          PropTypes.shape({
-            absolutePath: PropTypes.string.isRequired,
-          }),
-        ]).isRequired,
+          }).isRequired,
+        }),
       }),
     }).isRequired
   ).isRequired,

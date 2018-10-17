@@ -23,18 +23,14 @@ const Banner = ({ image }) => (
 
 Banner.propTypes = {
   image: PropTypes.shape({
-    localFile: PropTypes.oneOfType([
-      PropTypes.shape({
-        childImageSharp: PropTypes.shape({
-          fluid: PropTypes.shape({
-            src: PropTypes.string.isRequired,
-          }).isRequired,
+    url: PropTypes.string,
+    localFile: PropTypes.shape({
+      childImageSharp: PropTypes.shape({
+        fluid: PropTypes.shape({
+          src: PropTypes.string.isRequired,
         }).isRequired,
-      }),
-      PropTypes.shape({
-        absolutePath: PropTypes.string.isRequired,
-      }),
-    ]).isRequired,
+      }).isRequired,
+    }),
   }).isRequired,
 }
 
@@ -44,8 +40,8 @@ export const query = graphql`
   fragment BannerImage on PrismicHomepage {
     data {
       image {
+        url
         localFile {
-          absolutePath
           childImageSharp {
             fluid(maxWidth: 1920, quality: 80) {
               ...GatsbyImageSharpFluid

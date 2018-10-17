@@ -123,18 +123,14 @@ Footer.propTypes = {
       url: PropTypes.string.isRequired,
     }).isRequired,
     mapimage: PropTypes.shape({
-      localFile: PropTypes.oneOfType([
-        PropTypes.shape({
-          childImageSharp: PropTypes.shape({
-            fluid: PropTypes.shape({
-              src: PropTypes.string.isRequired,
-            }).isRequired,
+      url: PropTypes.string,
+      localFile: PropTypes.shape({
+        childImageSharp: PropTypes.shape({
+          fluid: PropTypes.shape({
+            src: PropTypes.string.isRequired,
           }).isRequired,
-        }),
-        PropTypes.shape({
-          absolutePath: PropTypes.string.isRequired,
-        }),
-      ]).isRequired,
+        }).isRequired,
+      }),
     }).isRequired,
   }).isRequired,
 }
@@ -154,8 +150,8 @@ export const query = graphql`
         url
       }
       mapimage {
+        url
         localFile {
-          absolutePath
           childImageSharp {
             fluid(maxWidth: 600, quality: 80) {
               ...GatsbyImageSharpFluid

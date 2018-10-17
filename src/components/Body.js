@@ -6,6 +6,7 @@ import styled from 'react-emotion'
 import s4 from 'node-uuid'
 
 import HTMLContent from './Content'
+import OpenForm from './OpenForm'
 import Points from './Points'
 import Slider from './Slider'
 
@@ -38,6 +39,9 @@ const Body = ({ body }) => (
           </Text>
         )}
         {__typename === 'PrismicHomepageBodyPoints' && <Points items={items} />}
+        {__typename === 'PrismicHomepageBodyForm' && (
+          <OpenForm primary={primary} />
+        )}
       </div>
     ))}
   </section>
@@ -63,35 +67,27 @@ Body.propTypes = {
           html: PropTypes.string.isRequired,
         }),
         formimage: PropTypes.shape({
-          localFile: PropTypes.oneOfType([
-            PropTypes.shape({
+          url: PropTypes.string,
+          localFile: PropTypes.shape({
+            childImageSharp: PropTypes.shape({
+              fluid: PropTypes.shape({
+                src: PropTypes.string.isRequired,
+              }).isRequired,
+            }).isRequired,
+          }),
+        }),
+      }),
+      items: PropTypes.arrayOf(
+        PropTypes.shape({
+          galleryimage: PropTypes.shape({
+            url: PropTypes.string,
+            localFile: PropTypes.shape({
               childImageSharp: PropTypes.shape({
                 fluid: PropTypes.shape({
                   src: PropTypes.string.isRequired,
                 }).isRequired,
               }).isRequired,
             }),
-            PropTypes.shape({
-              absolutePath: PropTypes.string.isRequired,
-            }),
-          ]).isRequired,
-        }),
-      }),
-      items: PropTypes.arrayOf(
-        PropTypes.shape({
-          galleryimage: PropTypes.shape({
-            localFile: PropTypes.oneOfType([
-              PropTypes.shape({
-                childImageSharp: PropTypes.shape({
-                  fluid: PropTypes.shape({
-                    src: PropTypes.string.isRequired,
-                  }).isRequired,
-                }).isRequired,
-              }),
-              PropTypes.shape({
-                absolutePath: PropTypes.string.isRequired,
-              }),
-            ]).isRequired,
           }),
           pointicon: PropTypes.shape({
             url: PropTypes.string.isRequired,
@@ -127,8 +123,8 @@ export const query = graphql`
           }
           items {
             galleryimage {
+              url
               localFile {
-                absolutePath
                 childImageSharp {
                   fluid(maxWidth: 1200, quality: 80) {
                     ...GatsbyImageSharpFluid
@@ -154,8 +150,8 @@ export const query = graphql`
               html
             }
             formimage {
+              url
               localFile {
-                absolutePath
                 childImageSharp {
                   fluid(maxWidth: 1920, quality: 80) {
                     ...GatsbyImageSharpFluid

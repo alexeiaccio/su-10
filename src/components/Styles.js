@@ -15,17 +15,23 @@ const screens = {
 }
 
 const evalWidth = number => `width: ${(100 / 12) * number}%`
+const orderString = order => `order: ${order};`
 
-const objectKeystoString = obj =>
+const mediaScreens = (fn, obj) =>
   Object.keys(obj)
     .filter(key => key !== 'xs')
-    .map(key => `@media (min-width: ${screens[key]}) {${evalWidth(obj[key])}}`)
+    .map(key => `@media (min-width: ${screens[key]}) {${fn(obj[key])}}`)
     .join(' ')
 
 const makeWidths = number =>
   number instanceof Object
-    ? `${evalWidth(number.xs)}; ${objectKeystoString(number)}`
+    ? `${evalWidth(number.xs)}; ${mediaScreens(evalWidth, number)}`
     : evalWidth(number)
+
+const makeOrder = order =>
+  order instanceof Object
+    ? `${orderString(order.xs)}; ${mediaScreens(orderString, order)}`
+    : orderString(order)
 
 /* Button */
 const Button = styled('button')`
@@ -54,10 +60,21 @@ const Col = styled('div')`
   ${tw(['px-q8', 'md:px-q16'])};
   ${({ number }) => (number ? makeWidths(number) : tw(['w-auto']))};
   box-sizing: border-box;
+  ${({ order }) => makeOrder(order)};
 `
 
 Col.propTypes = {
   number: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.shape({
+      xs: PropTypes.number.isRequired,
+      sm: PropTypes.number,
+      md: PropTypes.number,
+      lg: PropTypes.number,
+      xl: PropTypes.number,
+    }),
+  ]),
+  order: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.shape({
       xs: PropTypes.number.isRequired,

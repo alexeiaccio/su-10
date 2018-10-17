@@ -57,18 +57,14 @@ ProductPage.propTypes = {
               uid: PropTypes.string.isRequired,
             }).isRequired,
             productimage: PropTypes.shape({
-              localFile: PropTypes.oneOfType([
-                PropTypes.shape({
-                  childImageSharp: PropTypes.shape({
-                    fluid: PropTypes.shape({
-                      src: PropTypes.string.isRequired,
-                    }).isRequired,
+              url: PropTypes.string,
+              localFile: PropTypes.shape({
+                childImageSharp: PropTypes.shape({
+                  fluid: PropTypes.shape({
+                    src: PropTypes.string.isRequired,
                   }).isRequired,
-                }),
-                PropTypes.shape({
-                  absolutePath: PropTypes.string.isRequired,
-                }),
-              ]).isRequired,
+                }).isRequired,
+              }),
             }).isRequired,
           }).isRequired
         ).isRequired,
@@ -82,18 +78,14 @@ ProductPage.propTypes = {
           url: PropTypes.string.isRequired,
         }).isRequired,
         mapimage: PropTypes.shape({
-          localFile: PropTypes.oneOfType([
-            PropTypes.shape({
-              childImageSharp: PropTypes.shape({
-                fluid: PropTypes.shape({
-                  src: PropTypes.string.isRequired,
-                }).isRequired,
+          url: PropTypes.string,
+          localFile: PropTypes.shape({
+            childImageSharp: PropTypes.shape({
+              fluid: PropTypes.shape({
+                src: PropTypes.string.isRequired,
               }).isRequired,
-            }),
-            PropTypes.shape({
-              absolutePath: PropTypes.string.isRequired,
-            }),
-          ]).isRequired,
+            }).isRequired,
+          }),
         }).isRequired,
         body: PropTypes.arrayOf(
           PropTypes.shape({
@@ -114,35 +106,27 @@ ProductPage.propTypes = {
                 html: PropTypes.string.isRequired,
               }),
               formimage: PropTypes.shape({
-                localFile: PropTypes.oneOfType([
-                  PropTypes.shape({
+                url: PropTypes.string,
+                localFile: PropTypes.shape({
+                  childImageSharp: PropTypes.shape({
+                    fluid: PropTypes.shape({
+                      src: PropTypes.string.isRequired,
+                    }).isRequired,
+                  }).isRequired,
+                }),
+              }),
+            }),
+            items: PropTypes.arrayOf(
+              PropTypes.shape({
+                galleryimage: PropTypes.shape({
+                  url: PropTypes.string,
+                  localFile: PropTypes.shape({
                     childImageSharp: PropTypes.shape({
                       fluid: PropTypes.shape({
                         src: PropTypes.string.isRequired,
                       }).isRequired,
                     }).isRequired,
                   }),
-                  PropTypes.shape({
-                    absolutePath: PropTypes.string.isRequired,
-                  }),
-                ]).isRequired,
-              }),
-            }),
-            items: PropTypes.arrayOf(
-              PropTypes.shape({
-                galleryimage: PropTypes.shape({
-                  localFile: PropTypes.oneOfType([
-                    PropTypes.shape({
-                      childImageSharp: PropTypes.shape({
-                        fluid: PropTypes.shape({
-                          src: PropTypes.string.isRequired,
-                        }).isRequired,
-                      }).isRequired,
-                    }),
-                    PropTypes.shape({
-                      absolutePath: PropTypes.string.isRequired,
-                    }),
-                  ]).isRequired,
                 }),
                 pointicon: PropTypes.shape({
                   url: PropTypes.string.isRequired,
