@@ -46,7 +46,7 @@ const OpenForm = ({ primary }) => (
           <Text>
             <HTMLContent content={primary.formtext.html} />
           </Text>
-          <Form className={formStyles} />
+          <Form className={formStyles} name="open-form" />
         </Col>
       </Row>
     </Container>
