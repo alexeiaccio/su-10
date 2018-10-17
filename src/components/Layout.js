@@ -7,7 +7,6 @@ import styled from 'react-emotion'
 import Body from './Body'
 import Footer from './Footer'
 import Header from './Header'
-/* import Seo from './Seo' */
 
 import '../fonts/montserrat/stylesheet.css'
 
@@ -22,7 +21,6 @@ const Wrapper = styled('div')``
 
 const Layout = ({ data, children }) => (
   <>
-    {/* <Seo /> */}
     <Header tel={data.footertel} />
     <Wrapper>{children}</Wrapper>
     {data.body && <Body body={data.body.slice(1)} />}

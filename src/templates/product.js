@@ -7,25 +7,34 @@ import HTMLContent from '../components/Content'
 import Layout from '../components/Layout'
 import PriceList from '../components/PriceList'
 import { Container, Description, H1 } from '../components/Styles'
-/* import Seo from '../components/Seo'
+import Seo from '../components/Seo'
 
-const seo = {
-  pageTitle: 'Welcome',
-} */
-
-const ProductPage = ({ data, location }) => (
-  <Layout data={data.index.data}>
-    {/* <Seo {...seo} pathname={location.pathname} /> */}
-    <Breadcrumbs {...{ location }} />
-    <Container>
-      <H1>{data.product.data.title.text}</H1>
-      <Description>
-        <HTMLContent content={data.product.data.description.html} />
-      </Description>
-      <PriceList data={data.product.data} {...{ location }} />
-    </Container>
-  </Layout>
-)
+const ProductPage = ({ data, location }) => {
+  const { title, description } = data.product.data
+  const { seotitle, seodescription, seokeywords, seoimage } = data.seo.data
+  const seo = {
+    pageTitle: seotitle || title.text,
+    pageDescription: seodescription,
+    pageKeywords: seokeywords,
+    pageImage:
+      seoimage && seoimage.localFile
+        ? seoimage.localFile.childImageSharp.original.src
+        : seoimage.url,
+  }
+  return (
+    <Layout data={data.index.data}>
+      <Seo {...seo} pathname={location.pathname} />
+      <Breadcrumbs {...{ location }} />
+      <Container>
+        <H1>{title.text}</H1>
+        <Description>
+          <HTMLContent content={description.html} />
+        </Description>
+        <PriceList data={data.product.data} {...{ location }} />
+      </Container>
+    </Layout>
+  )
+}
 
 ProductPage.propTypes = {
   data: PropTypes.shape({
@@ -140,6 +149,23 @@ ProductPage.propTypes = {
         ),
       }).isRequired,
     }).isRequired,
+    seo: PropTypes.shape({
+      data: PropTypes.shape({
+        seotitle: PropTypes.string.isRequired,
+        seodescription: PropTypes.string.isRequired,
+        seokeywords: PropTypes.string.isRequired,
+        seoimage: PropTypes.shape({
+          url: PropTypes.string.isRequired,
+          localFile: PropTypes.shape({
+            childImageSharp: PropTypes.shape({
+              original: PropTypes.shape({
+                src: PropTypes.string.isRequired,
+              }).isRequired,
+            }).isRequired,
+          }).isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
   }).isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
@@ -175,6 +201,13 @@ export const pageQuery = graphql`
         seokeywords
         seoimage {
           url
+          localFile {
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
         }
       }
     }

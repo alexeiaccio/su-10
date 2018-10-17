@@ -49,9 +49,14 @@ const Button = styled('button')`
     'w-full',
   ])};
   box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translate(2px, -2px);
+    box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.3);
+  }
   &:active {
-    transform: translate(-2px, 2px);
-    box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.3);
+    transform: translate(-1px, 1px);
+    box-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3);
   }
 `
 

@@ -10,11 +10,7 @@ import HTMLContent from '../components/Content'
 import Layout from '../components/Layout'
 import Products from '../components/Products'
 import { Container, HiddenFromMD, TextBase } from '../components/Styles'
-/* import Seo from '../components/Seo'
-
-const seo = {
-  pageTitle: 'Welcome',
-} */
+import Seo from '../components/Seo'
 
 const Description = styled('div')`
   ${tw([
@@ -42,11 +38,21 @@ const H1 = styled('h1')`
   ])};
 `
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const { body, image, title, description, products } = data.index.data
+  const { seotitle, seodescription, seokeywords, seoimage } = data.seo.data
+  const seo = {
+    pageTitle: seotitle || title.text,
+    pageDescription: seodescription,
+    pageKeywords: seokeywords,
+    pageImage:
+      seoimage && seoimage.localFile
+        ? seoimage.localFile.childImageSharp.original.src
+        : seoimage.url,
+  }
   return (
     <Layout data={data.index.data}>
-      {/* <Seo {...seo} pathname={location.pathname} /> */}
+      <Seo {...seo} pathname={location.pathname} />
       <Banner image={image} />
       <Container>
         <Description className={cx(HiddenFromMD, TextBase)}>
@@ -184,6 +190,23 @@ IndexPage.propTypes = {
         ),
       }).isRequired
     ),
+    seo: PropTypes.shape({
+      data: PropTypes.shape({
+        seotitle: PropTypes.string.isRequired,
+        seodescription: PropTypes.string.isRequired,
+        seokeywords: PropTypes.string.isRequired,
+        seoimage: PropTypes.shape({
+          url: PropTypes.string.isRequired,
+          localFile: PropTypes.shape({
+            childImageSharp: PropTypes.shape({
+              original: PropTypes.shape({
+                src: PropTypes.string.isRequired,
+              }).isRequired,
+            }).isRequired,
+          }).isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
   }).isRequired,
 }
 
@@ -212,6 +235,13 @@ export const pageQuery = graphql`
         seokeywords
         seoimage {
           url
+          localFile {
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
         }
       }
     }

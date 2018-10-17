@@ -4,24 +4,6 @@ import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import jsonldGenerator from '../utils/jsonld-generator'
 
-const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        siteTitle
-        siteUrl
-        siteDescription
-        siteKeywords
-        siteThemeColor
-        social {
-          twitter
-          fbAppId
-        }
-      }
-    }
-  }
-`
-
 const Seo = ({
   pageTitle,
   pageDescription,
@@ -29,6 +11,7 @@ const Seo = ({
   pageImage,
   pathname,
   config,
+  data,
 }) => {
   const {
     siteTitle,
@@ -38,10 +21,19 @@ const Seo = ({
     siteThemeColor,
     social,
   } = config
-  const pageTitleFull = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
-  const pageDescriptionFull = pageDescription || siteDescription
-  const pageKeywordsFull = pageKeywords || siteKeywords
-  const pageImageFull = pageImage || '/images/social.png'
+  const { seotitle, seodescription, seokeywords, seoimage } = data
+  const pageTitleFull = pageTitle
+    ? `${pageTitle} | ${seotitle || siteTitle}`
+    : seotitle || siteTitle
+  const pageDescriptionFull =
+    pageDescription || seodescription || siteDescription
+  const pageKeywordsFull = pageKeywords || seokeywords || siteKeywords
+  const pageImageFull =
+    pageImage ||
+    (seoimage && seoimage.localFile
+      ? seoimage.localFile.childImageSharp.original.src
+      : seoimage.url) ||
+    '/images/social.jpg'
   const canonical = siteUrl + (pathname || '')
 
   return (
@@ -212,12 +204,66 @@ Seo.propTypes = {
       fbAppId: PropTypes.string.isRequired,
     }),
   }).isRequired,
+  data: PropTypes.shape({
+    seotitle: PropTypes.string.isRequired,
+    seodescription: PropTypes.string.isRequired,
+    seokeywords: PropTypes.string.isRequired,
+    seoimage: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      localFile: PropTypes.shape({
+        childImageSharp: PropTypes.shape({
+          original: PropTypes.shape({
+            src: PropTypes.string.isRequired,
+          }).isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
 }
 
 const withStaticQuery = props => (
   <StaticQuery
-    query={query}
-    render={data => <Seo config={data.site.siteMetadata} {...props} />}
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            siteTitle
+            siteUrl
+            siteDescription
+            siteKeywords
+            siteThemeColor
+            social {
+              twitter
+              fbAppId
+            }
+          }
+        }
+        prismicHomepage {
+          data {
+            seotitle
+            seodescription
+            seokeywords
+            seoimage {
+              url
+              localFile {
+                childImageSharp {
+                  original {
+                    src
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Seo
+        config={data.site.siteMetadata}
+        data={data.prismicHomepage.data}
+        {...props}
+      />
+    )}
   />
 )
 

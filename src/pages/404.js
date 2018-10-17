@@ -1,16 +1,35 @@
+/* global tw */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+import { css } from 'react-emotion'
 
 import Layout from '../components/Layout'
+import {
+  Button,
+  Col,
+  Container,
+  JustifyCenter,
+  Row,
+} from '../components/Styles'
+
+const colStyles = css`
+  ${tw(['text-center'])};
+`
 
 const NotFoundPage = ({ data }) => (
   <Layout data={data.index.data}>
-    <h1>404</h1>
-    <p>
-      Do not worry! Incorrect URLs will lead your users here when running in
-      production mode.
-    </p>
+    <Container>
+      <Row className={JustifyCenter}>
+        <Col className={colStyles} number={{ xs: 12, md: 8 }}>
+          <h1>404</h1>
+          <p>Такой страницы нет :(</p>
+          <Link to="/">
+            <Button>Вернутся на главную</Button>
+          </Link>
+        </Col>
+      </Row>
+    </Container>
   </Layout>
 )
 

@@ -9,17 +9,16 @@ const siteTitle = 'SU-10'
 const siteUrl = 'https://www.su-10.ru'
 const siteDescription = 'SU-10'
 const siteKeywords = 'Gatsby'
-const siteThemeColor = '#009688'
+const siteThemeColor = '#FFAB00'
 
 // Accounts & API keys
-const twitter = 'your-twitter-account'
-const fbAppId = 'your-fb-app-id'
-/* const gaId = 'your-ga-id' */
+const twitter = ''
+const fbAppId = ''
 
 // Used internally
-const utilsTitleShort = 'BundleGatsby'
+const utilsTitleShort = 'SU-10'
 const utilsIcon = 'static/images/icon.png'
-const utilsBackgroundColor = '#009688'
+const utilsBackgroundColor = '#FFAB00'
 
 // Do not modify unless you know what you're doing
 module.exports = {
