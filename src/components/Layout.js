@@ -25,7 +25,7 @@ const Layout = ({ data, children }) => (
     {/* <Seo /> */}
     <Header tel={data.footertel} />
     <Wrapper>{children}</Wrapper>
-    <Body body={data.body.slice(1)} />
+    {data.body && <Body body={data.body.slice(1)} />}
     <Footer {...{ data }} />
   </>
 )
@@ -55,7 +55,7 @@ Layout.propTypes = {
           }),
         }).isRequired,
       }).isRequired
-    ).isRequired,
+    ),
     footertel: PropTypes.shape({
       html: PropTypes.string.isRequired,
     }).isRequired,
