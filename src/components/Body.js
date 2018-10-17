@@ -6,6 +6,7 @@ import styled from 'react-emotion'
 import s4 from 'node-uuid'
 
 import HTMLContent from './Content'
+import Slider from './Slider'
 
 const Text = styled('div')`
   ${tw(['mt-q96', 'text-center'])};
@@ -22,11 +23,17 @@ const Text = styled('div')`
 
 const Body = ({ body }) => (
   <section>
-    {body.map(({ __typename, primary }) => (
+    {body.map(({ __typename, primary, items }) => (
       <div key={s4()}>
         {__typename === 'PrismicHomepageBodyText' && (
           <Text key={s4()}>
             <HTMLContent key={s4()} content={primary.text.html} />
+          </Text>
+        )}
+        {__typename === 'PrismicHomepageBodyImageGallery' && (
+          <Text key={s4()}>
+            <h2 key={s4()}>{primary.gallerytitle.text}</h2>
+            <Slider items={items} />
           </Text>
         )}
       </div>

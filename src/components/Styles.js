@@ -78,6 +78,11 @@ const Container = styled('div')`
   box-sizing: border-box;
 `
 
+const FluidContainer = styled('div')`
+  ${tw(['overflow-hidden', 'relative', 'w-full'])};
+  box-sizing: border-box;
+`
+
 /* Description */
 const Description = styled('div')`
   ${tw(['leading-normal', 'my-q72', 'text-base', 'text-center'])};
@@ -246,6 +251,7 @@ export {
   Col,
   Container,
   Description,
+  FluidContainer,
   H1,
   H2,
   HeaderDescription,
