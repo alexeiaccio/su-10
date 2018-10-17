@@ -1,7 +1,9 @@
 /* global tw */
 import PropTypes from 'prop-types'
 import styled, { css } from 'react-emotion'
+import { Link } from 'gatsby'
 
+import logoSvg from '../assets/logo.svg'
 import MenuSvg from '../assets/menu.svg'
 import TelSvg from '../assets/tel.svg'
 
@@ -84,6 +86,11 @@ const Description = styled('div')`
   }
 `
 
+/* HeaderDescription */
+const HeaderDescription = styled('div')`
+  ${tw(['leading-normal', 'text-base'])};
+`
+
 /* Heading */
 const H1 = styled('h1')`
   ${tw(['font-normal', 'mb-0', 'mt-q72', 'text-4xl', 'text-center'])};
@@ -91,6 +98,22 @@ const H1 = styled('h1')`
 
 const H2 = styled('h2')`
   ${tw(['font-normal', 'mb-0', 'mt-q48', 'text-2xl', 'text-center'])};
+`
+
+/* Logo */
+const Logo = styled(Link)`
+  ${tw([
+    'bg-left',
+    'bg-contain',
+    'bg-no-repeat',
+    'block',
+    'h-q36',
+    'sm:h-q48',
+    'md:h-q64',
+    'w-full',
+  ])}
+  background-image: url(${logoSvg});
+  min-width: 4.5rem;
 `
 
 /* Row */
@@ -116,6 +139,53 @@ const SquareButton = styled('button')`
     'w-q36',
     'sm:w-q48',
   ])};
+`
+
+/* TelBlock */
+const TelIcon = css`
+  background-image: url(${TelSvg});
+`
+
+const TelBlock = styled('div')`
+  ${tw(['leading-normal', 'p-2', 'text-xxs', 'md:text-xs'])};
+  & p,
+  & h3 {
+    ${tw(['m-0'])};
+  }
+  & a {
+    ${tw([
+      'font-bold',
+      '-m-2',
+      'no-underline',
+      'relative',
+      'text-black',
+      'text-sm',
+      'md:text-xl',
+    ])};
+    &:before {
+      ${tw([
+        'absolute',
+        'bg-center',
+        'bg-contain',
+        'bg-no-repeat',
+        'hidden',
+        'sm:block',
+        'h-q16',
+        'w-q16',
+        'md:h-q20',
+        'md:w-q20',
+      ])};
+      ${TelIcon};
+      content: '';
+      left: -1.15rem;
+      top: 0;
+    }
+    @media (min-width: 768px) {
+      &:before {
+        left: -1.5rem;
+      }
+    }
+  }
 `
 
 /* Utils */
@@ -163,10 +233,6 @@ const ShowToMD = css`
   ${tw(['block', 'md:hidden'])};
 `
 
-const TelIcon = css`
-  background-image: url(${TelSvg});
-`
-
 const TextBase = css`
   ${tw(['text-base'])};
 `
@@ -182,6 +248,7 @@ export {
   Description,
   H1,
   H2,
+  HeaderDescription,
   HiddenFromMD,
   HiddenToMD,
   HiddenToLG,
@@ -189,12 +256,14 @@ export {
   HiddenToXL,
   JustifyCenter,
   JustifyEnd,
+  Logo,
   marginBottomToMD,
   MarginLeftTwoCol,
   MenuIcon,
   Row,
   SquareButton,
   ShowToMD,
+  TelBlock,
   TelIcon,
   TextBase,
   WrapToMD,

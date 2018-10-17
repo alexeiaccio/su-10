@@ -1,6 +1,7 @@
 /* global tw */
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 import styled, { css } from 'react-emotion'
 
 import Img from './Img'
@@ -66,8 +67,8 @@ const RoundIcon = styled('div')`
   background-size: 4rem;
 `
 
-const Wrapper = styled('div')`
-  ${tw(['overflow-hidden', 'relative', 'rounded-t-sm'])};
+const Wrapper = styled(Link)`
+  ${tw(['overflow-hidden', 'no-underline', 'relative', 'rounded-t-sm'])};
   &::before {
     ${tw(['absolute', 'bg-black', 'opacity-60', 'pin', 'z-10'])};
     content: '';
@@ -84,6 +85,7 @@ const Wrapper = styled('div')`
       'pr-q4',
       'pl-q24',
       'rounded-sm',
+      'text-black',
       'text-xs',
       'uppercase',
       'z-20',
@@ -100,10 +102,16 @@ const ImgStyles = css`
 `
 
 const PropductCard = ({
-  product: { producttitle, productcaption, productprice, productimage },
+  product: {
+    productlink,
+    producttitle,
+    productcaption,
+    productprice,
+    productimage,
+  },
 }) => (
   <Card>
-    <Wrapper>
+    <Wrapper to={productlink.uid}>
       <Img
         src={productimage}
         className={ImgStyles}

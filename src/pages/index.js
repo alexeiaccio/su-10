@@ -44,7 +44,7 @@ const H1 = styled('h1')`
 const IndexPage = ({ data }) => {
   const { image, title, description, products } = data.index.data
   return (
-    <Layout>
+    <Layout data={data.index.data}>
       {/* <Seo {...seo} pathname={location.pathname} /> */}
       <Banner image={image} />
       <Container>
@@ -86,6 +86,57 @@ IndexPage.propTypes = {
             }),
           ]).isRequired,
         }).isRequired,
+        products: PropTypes.arrayOf(
+          PropTypes.shape({
+            producttitle: PropTypes.shape({
+              text: PropTypes.string.isRequired,
+            }).isRequired,
+            productcaption: PropTypes.shape({
+              html: PropTypes.string.isRequired,
+            }).isRequired,
+            productprice: PropTypes.string.isRequired,
+            productlink: PropTypes.shape({
+              uid: PropTypes.string.isRequired,
+            }).isRequired,
+            productimage: PropTypes.shape({
+              localFile: PropTypes.oneOfType([
+                PropTypes.shape({
+                  childImageSharp: PropTypes.shape({
+                    fluid: PropTypes.shape({
+                      src: PropTypes.string.isRequired,
+                    }).isRequired,
+                  }).isRequired,
+                }),
+                PropTypes.shape({
+                  absolutePath: PropTypes.string.isRequired,
+                }),
+              ]).isRequired,
+            }).isRequired,
+          }).isRequired
+        ).isRequired,
+        footertel: PropTypes.shape({
+          html: PropTypes.string.isRequired,
+        }).isRequired,
+        footertext: PropTypes.shape({
+          html: PropTypes.string.isRequired,
+        }).isRequired,
+        map: PropTypes.shape({
+          url: PropTypes.string.isRequired,
+        }).isRequired,
+        mapimage: PropTypes.shape({
+          localFile: PropTypes.oneOfType([
+            PropTypes.shape({
+              childImageSharp: PropTypes.shape({
+                fluid: PropTypes.shape({
+                  src: PropTypes.string.isRequired,
+                }).isRequired,
+              }).isRequired,
+            }),
+            PropTypes.shape({
+              absolutePath: PropTypes.string.isRequired,
+            }),
+          ]).isRequired,
+        }).isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,
@@ -98,6 +149,7 @@ export const pageQuery = graphql`
     index: prismicHomepage {
       ...BannerImage
       ...ProductsFragment
+      ...FooterFragment
       data {
         title {
           text

@@ -3,6 +3,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { injectGlobal } from 'emotion'
 import styled from 'react-emotion'
+
+import Footer from './Footer'
 import Header from './Header'
 /* import Seo from './Seo' */
 
@@ -17,12 +19,13 @@ injectGlobal`
 
 const Wrapper = styled('div')``
 
-const Layout = ({ children }) => (
+const Layout = ({ data, children }) => (
   <>
     {/* <Seo /> */}
-    <Header />
+    <Header tel={data.footertel} />
     <Wrapper>{children}</Wrapper>
-    {/* Footer component goes here */}
+
+    <Footer {...{ data }} />
   </>
 )
 
