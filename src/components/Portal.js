@@ -6,22 +6,25 @@ import ReactDOM from 'react-dom'
 class Portal extends Component {
   constructor(props) {
     super(props)
-    this.el = document.createElement('div')
+    this.el = null
+    this.modalRoot = null
   }
 
   componentDidMount() {
-    const modalRoot = document.getElementById('modal-root')
-    modalRoot.appendChild(this.el)
+    if (typeof document !== 'undefined') {
+      this.el = document.createElement('div')
+      this.modalRoot = document.getElementById('modal-root')
+      this.modalRoot.appendChild(this.el)
+    }
   }
 
   componentWillUnmount() {
-    const modalRoot = document.getElementById('modal-root')
-    modalRoot.removeChild(this.el)
+    this.modalRoot.removeChild(this.el)
   }
 
   render() {
     const { children } = this.props
-    return ReactDOM.createPortal(children, this.el)
+    return this.el ? ReactDOM.createPortal(children, this.el) : false
   }
 }
 
