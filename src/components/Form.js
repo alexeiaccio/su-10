@@ -43,10 +43,16 @@ class Form extends Component {
     const { values } = this.state
 
     return (
-      <StyledForm {...props}>
+      <StyledForm
+        {...props}
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <p hidden>
           <label htmlFor="bot-field">
-            Don’t fill this out: <input id="bot-field" name="bot-field" />
+            Don’t fill this out:{' '}
+            <input id="bot-field" name="form-name" value="contact" />
           </label>
         </p>
         <Row className={rowStyles}>
