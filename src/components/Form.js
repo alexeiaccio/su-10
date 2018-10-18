@@ -1,5 +1,5 @@
 /* global tw */
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'react-emotion'
 
@@ -28,6 +28,7 @@ class Form extends Component {
     this.changeHandler = this.changeHandler.bind(this)
     this.submit = this.submit.bind(this)
     this.closeSucces = this.closeSucces.bind(this)
+    this.botField = createRef()
     this.state = {
       values: {},
       sending: false,
@@ -39,15 +40,16 @@ class Form extends Component {
   componentDidMount() {
     const { values } = this.state
     const { value } = this.props
-    this.setState({
-      values: { ...values, order: value },
-    })
+    if (value !== '') {
+      this.setState({
+        values: { ...values, order: value },
+      })
+    }
   }
 
   changeHandler(e) {
     const { name, value } = e.target
     const { values } = this.state
-
     this.setState({
       values: { ...values, [name]: value },
     })
@@ -55,24 +57,26 @@ class Form extends Component {
 
   async submit(e) {
     e.preventDefault()
-    this.setState({
-      sending: true,
-    })
-    const { values } = this.state
-    const { name } = this.props
-    const response = await sendMail({ ...values, form: name })
-    this.setState({
-      sending: false,
-      success: true,
-      message: response.res[1],
-      values: {},
-    })
-    setTimeout(() => {
+    if (this.botField.current.value === '') {
       this.setState({
-        success: false,
-        message: '',
+        sending: true,
       })
-    }, 4000)
+      const { values } = this.state
+      const { name } = this.props
+      const response = await sendMail({ ...values, form: name })
+      this.setState({
+        sending: false,
+        success: true,
+        message: response.res[0] || 'Спасибо! Ваша заявка принята!',
+        values: {},
+      })
+      setTimeout(() => {
+        this.setState({
+          success: false,
+          message: '',
+        })
+      }, 4000)
+    }
   }
 
   closeSucces() {
@@ -90,7 +94,8 @@ class Form extends Component {
       <StyledForm {...props} onSubmit={this.submit}>
         <p hidden>
           <label htmlFor="bot-field">
-            Don’t fill this out: <input id="bot-field" name="bot-field" />
+            Don’t fill this out:{' '}
+            <input id="bot-field" name="bot-field" ref={this.botField} />
           </label>
         </p>
         <Row className={rowStyles}>

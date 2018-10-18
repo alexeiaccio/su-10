@@ -25,14 +25,17 @@ module.exports.send = (event, context, callback) => {
     statusCode: 200,
     headers: {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST',
+      'Access-Control-Allow-Methods': 'GET',
     },
     body: JSON.stringify({
       message: 'Got!!',
-      input: event.body,
       res,
     }),
   })
-
-  sendMail(JSON.parse(event.body), res => callback(null, response(res)))
+  const message = event.queryStringParameters
+  if (message) {
+    sendMail(message, res => callback(null, response(res)))
+  } else {
+    callback(null, response(['Hello!']))
+  }
 }

@@ -3,6 +3,8 @@ import { loadState, saveState } from './localStorage'
 
 const SLS_URL = 'https://3pc83kxpa5.execute-api.us-east-1.amazonaws.com/dev/'
 
+/* const DEV_URL = 'http://localhost:3000/' */
+
 const fetchValues = async location => {
   const values = await fetch(`${SLS_URL}get?list=${location}`, {
     cors: 'no-cors',
@@ -18,13 +20,15 @@ const fetchValues = async location => {
   return values
 }
 
+const makeMessage = obj => {
+  const keys = Object.keys(obj)
+  return keys
+    .reduce((acc, key) => acc.concat(`${key}=${obj[key]}&`), [])
+    .join('')
+}
+
 const sendMail = async message => {
-  const values = await fetch(`${SLS_URL}send`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(message),
+  const values = await fetch(`${SLS_URL}send?${makeMessage(message)}`, {
     cors: 'no-cors',
   })
     .then(res => res.json())

@@ -40,12 +40,12 @@ const sendMail = (options, callback) => {
 
   transporter.sendMail(message, (error, info) => {
     const res = []
-    res.push(info)
     if (error) {
       res.push(`Ошибка: ${error.message}`)
       return process.exit(1)
     }
     res.push('Спасибо! Ваша заявка принята!')
+    res.push(info)
     return callback(res)
   })
 }
