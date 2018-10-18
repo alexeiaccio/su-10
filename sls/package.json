@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "googleapis": "27",
+    "nodemailer": "^4.6.8",
     "serverless-offline": "^3.25.10"
   }
 }

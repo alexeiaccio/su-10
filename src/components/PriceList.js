@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import getValues from '../api'
+import { getValues } from '../api'
 import Table from './Table'
 import { H2 } from './Styles'
 

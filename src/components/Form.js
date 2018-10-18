@@ -1,10 +1,12 @@
 /* global tw */
 import React, { Component } from 'react'
-
 import PropTypes from 'prop-types'
 import styled, { css } from 'react-emotion'
 
+import { sendMail } from '../api'
 import Input from './Input'
+import Sending from './Sending'
+import Success from './Success'
 import TextArea from './TextArea'
 import { Button, Col, Row } from './Styles'
 
@@ -24,9 +26,22 @@ class Form extends Component {
   constructor() {
     super()
     this.changeHandler = this.changeHandler.bind(this)
+    this.submit = this.submit.bind(this)
+    this.closeSucces = this.closeSucces.bind(this)
     this.state = {
       values: {},
+      sending: false,
+      success: true,
+      message: '',
     }
+  }
+
+  componentDidMount() {
+    const { values } = this.state
+    const { value } = this.props
+    this.setState({
+      values: { ...values, order: value },
+    })
   }
 
   changeHandler(e) {
@@ -38,21 +53,44 @@ class Form extends Component {
     })
   }
 
+  async submit(e) {
+    e.preventDefault()
+    this.setState({
+      sending: true,
+    })
+    const { values } = this.state
+    const { name } = this.props
+    const response = await sendMail({ ...values, form: name })
+    this.setState({
+      sending: false,
+      success: true,
+      message: response.res[1],
+      values: {},
+    })
+    setTimeout(() => {
+      this.setState({
+        success: false,
+        message: '',
+      })
+    }, 4000)
+  }
+
+  closeSucces() {
+    this.setState({
+      success: false,
+      message: '',
+    })
+  }
+
   render() {
     const { value, textarea, ...props } = this.props
-    const { values } = this.state
+    const { values, sending, success, message } = this.state
 
     return (
-      <StyledForm
-        {...props}
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
+      <StyledForm {...props} onSubmit={this.submit}>
         <p hidden>
           <label htmlFor="bot-field">
-            Don’t fill this out:{' '}
-            <input id="bot-field" name="form-name" value="contact" />
+            Don’t fill this out: <input id="bot-field" name="bot-field" />
           </label>
         </p>
         <Row className={rowStyles}>
@@ -111,6 +149,8 @@ class Form extends Component {
         <Button className={buttonStyles} type="submit">
           оставить заявку
         </Button>
+        {sending && <Sending sending={sending} />}
+        {success && <Success message={message} close={this.closeSucces} />}
       </StyledForm>
     )
   }
