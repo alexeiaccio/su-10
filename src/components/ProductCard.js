@@ -64,7 +64,13 @@ const RoundIcon = styled('div')`
 `
 
 const Wrapper = styled(Link)`
-  ${tw(['overflow-hidden', 'no-underline', 'relative', 'rounded-t-sm'])};
+  ${tw([
+    'overflow-hidden',
+    'flex-1',
+    'no-underline',
+    'relative',
+    'rounded-t-sm',
+  ])};
   &::before {
     ${tw(['absolute', 'bg-black', 'opacity-60', 'pin', 'z-10'])};
     content: '';
@@ -97,7 +103,7 @@ const ImgStyles = css`
   ${tw(['pin'])};
 `
 
-const ButtonContainer = styled('dib')`
+const ButtonContainer = styled('div')`
   ${tw(['px-q36', 'w-full'])};
   box-sizing: border-box;
 `

@@ -64,8 +64,8 @@ const IndexPage = ({ data, location }) => {
           <HTMLContent content={description.html} />
         </Description>
         <Products products={products} />
-        <Body body={body.slice(0, 1)} />
       </Container>
+      <Body body={body.slice(0, 1)} />
     </Layout>
   )
 }

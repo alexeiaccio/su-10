@@ -9,6 +9,7 @@ import HTMLContent from './Content'
 import OpenForm from './OpenForm'
 import Points from './Points'
 import Slider from './Slider'
+import { Container } from './Styles'
 
 const Text = styled('div')`
   ${tw(['mt-q96', 'text-center'])};
@@ -28,9 +29,11 @@ const Body = ({ body }) => (
     {body.map(({ __typename, primary, items }) => (
       <div key={s4()}>
         {__typename === 'PrismicHomepageBodyText' && (
-          <Text key={s4()}>
-            <HTMLContent key={s4()} content={primary.text.html} />
-          </Text>
+          <Container>
+            <Text key={s4()}>
+              <HTMLContent key={s4()} content={primary.text.html} />
+            </Text>
+          </Container>
         )}
         {__typename === 'PrismicHomepageBodyImageGallery' && (
           <Text key={s4()}>
