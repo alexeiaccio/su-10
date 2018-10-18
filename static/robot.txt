@@ -1,0 +1,7 @@
+User-agent: Yandex
+Allow: /
+sitemap: https://www.su-10.ru/sitemap.xml
+
+User-agent: *
+Allow: /
+sitemap: https://www.su-10.ru/sitemap.xml
