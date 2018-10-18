@@ -1,12 +1,13 @@
-/* eslint-disable */
+require('dotenv').config()
 const nodemailer = require('nodemailer')
 
 const makeMessage = obj => {
   const keys = Object.keys(obj)
   return keys
-    .reduce((acc, key) => {
-      return acc.concat(`<p>${key}: <strong>${obj[key]}</strong></p>`)
-    }, [])
+    .reduce(
+      (acc, key) => acc.concat(`<p>${key}: <strong>${obj[key]}</strong></p>`),
+      []
+    )
     .join('')
 }
 
@@ -17,8 +18,8 @@ const sendMail = (options, callback) => {
       port: 465,
       secure: true,
       auth: {
-        user: 'info@su-10.ru',
-        pass: '4MvVLX_D',
+        user: process.env.LOGIN,
+        pass: process.env.PASSWORD,
       },
       tls: {
         rejectUnauthorized: false,

@@ -132,6 +132,13 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@jimdo/serverless-dotenv@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@jimdo/serverless-dotenv/-/serverless-dotenv-1.0.0.tgz#b41b81537b5a0a9ca0cbef7b49417d27480a5ce0"
+  integrity sha1-tBuBU3taCpygy+97SUF9J0gKXOA=
+  dependencies:
+    mkdirp "^0.5.1"
+
 accept@2.x.x:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/accept/-/accept-2.1.4.tgz#887af54ceee5c7f4430461971ec400c61d09acbb"
@@ -302,6 +309,11 @@ debug@^3.1.0:
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
   dependencies:
     ms "^2.1.1"
+
+dotenv@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.1.0.tgz#9853b6ca98292acb7dec67a95018fa40bccff42c"
+  integrity sha512-/veDn2ztgRlB7gKmE3i9f6CmDIyXAy6d5nBq+whO9SLX+Zs1sXEgFLPi+aSuWqUuusMfbi84fT8j34fs1HaYUw==
 
 ecdsa-sig-formatter@1.0.10:
   version "1.0.10"

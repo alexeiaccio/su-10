@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@jimdo/serverless-dotenv": "^1.0.0",
+    "dotenv": "^6.1.0",
     "googleapis": "27",
     "nodemailer": "^4.6.8",
     "serverless-offline": "^3.25.10"

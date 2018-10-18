@@ -9,3 +9,4 @@ jspm_packages
 credentials.json
 client_secret.json
 token.json
+.env
