@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'react-emotion'
 import { Link } from 'gatsby'
 
+import CloseSvg from '../assets/close.svg'
 import logoSvg from '../assets/logo.svg'
 import MenuSvg from '../assets/menu.svg'
 import TelSvg from '../assets/tel.svg'
@@ -217,6 +218,10 @@ const TelBlock = styled('div')`
 `
 
 /* Utils */
+const CloseIcon = css`
+  background-image: url(${CloseSvg});
+`
+
 const HiddenFromMD = css`
   ${tw(['md:hidden'])};
 `
@@ -271,6 +276,7 @@ const WrapToMD = css`
 
 export {
   Button,
+  CloseIcon,
   Col,
   Container,
   Description,

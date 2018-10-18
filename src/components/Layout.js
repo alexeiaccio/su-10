@@ -19,16 +19,19 @@ injectGlobal`
 
 const Wrapper = styled('div')``
 
-const Layout = ({ data, children }) => (
-  <>
-    <Header tel={data.footertel} />
+const Layout = ({ data, location, children }) => (
+  <div id="modal-root">
+    <Header tel={data.footertel} {...{ location }} />
     <Wrapper>{children}</Wrapper>
     {data.body && <Body body={data.body.slice(1)} />}
     <Footer {...{ data }} />
-  </>
+  </div>
 )
 
 Layout.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
   data: PropTypes.shape({
     products: PropTypes.arrayOf(
       PropTypes.shape({

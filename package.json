@@ -33,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "babel-plugin-emotion": "^9.2.11",
     "babel-plugin-tailwind": "^0.1.10",
     "dotenv": "^6.1.0",
@@ -58,6 +59,7 @@
     "react-dom": "^16.4.2",
     "react-emotion": "^9.2.12",
     "react-helmet": "^5.2.0",
+    "react-pose": "^3.3.6",
     "tailwindcss": "^0.6.6",
     "whatwg-fetch": "^3.0.0"
   },

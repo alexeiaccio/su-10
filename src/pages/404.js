@@ -17,8 +17,8 @@ const colStyles = css`
   ${tw(['text-center'])};
 `
 
-const NotFoundPage = ({ data }) => (
-  <Layout data={data.index.data}>
+const NotFoundPage = ({ data, location }) => (
+  <Layout data={data.index.data} {...{ location }}>
     <Container>
       <Row className={JustifyCenter}>
         <Col className={colStyles} number={{ xs: 12, md: 8 }}>

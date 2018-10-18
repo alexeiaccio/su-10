@@ -51,7 +51,7 @@ const IndexPage = ({ data, location }) => {
         : seoimage.url,
   }
   return (
-    <Layout data={data.index.data}>
+    <Layout data={data.index.data} {...{ location }}>
       <Seo {...seo} pathname={location.pathname} />
       <Banner image={image} />
       <Container>

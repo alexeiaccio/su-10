@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import s4 from 'node-uuid'
-import styled, { css } from 'react-emotion'
+import styled, { css, cx } from 'react-emotion'
 import { StaticQuery, Link, graphql } from 'gatsby'
 
 import { Col, Container, JustifyCenter, Row } from './Styles'
@@ -45,18 +45,21 @@ const StyledLink = styled(Link)`
   }
 `
 
-const Wrapper = styled('div')`
+const Wrapper = styled('nav')`
   ${tw([
     'bg-black',
-    'hidden',
-    'md:block',
     'font-bold',
+    'overflow-x-auto',
     'py-q24',
     'text-white',
     'tracking-button',
     'uppercase',
     'w-full',
   ])};
+`
+
+const rowStyles = css`
+  min-width: 50rem;
 `
 
 const Breadcrumbs = ({ location }) => (
@@ -80,9 +83,13 @@ const Breadcrumbs = ({ location }) => (
     render={data => (
       <Wrapper>
         <Container>
-          <Row className={JustifyCenter}>
+          <Row className={cx(JustifyCenter, rowStyles)}>
             {data.allPrismicProduct.edges.map(({ node }) => (
-              <Col className={JustifyCenter} key={s4()} number={3}>
+              <Col
+                className={JustifyCenter}
+                key={s4()}
+                number={{ xs: 4, md: 3 }}
+              >
                 {location.pathname.replace(/\//g, '') === node.uid ? (
                   <Current key={s4()}>{node.data.title.text}</Current>
                 ) : (

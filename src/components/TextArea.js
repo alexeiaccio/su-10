@@ -7,7 +7,7 @@ const Group = styled('div')`
   ${tw(['flex', 'flex-col'])};
 `
 
-const StyledInput = styled('input')`
+const StyledInput = styled('textarea')`
   ${tw([
     'border',
     'border-grey',
@@ -30,38 +30,28 @@ const Label = styled('label')`
   ${tw(['mb-q12', 'text-base'])};
 `
 
-const Star = styled('span')`
-  ${tw(['text-red'])};
-`
-
-const Input = ({ changeHandler, label, name, required, type, value }) => (
+const TextArea = ({ changeHandler, label, name, value }) => (
   <Group>
-    <Label htmlFor={name}>
-      {label}
-      {required && <Star> *</Star>}
-    </Label>
+    <Label htmlFor={name}>{label}</Label>
     <StyledInput
       id={name}
       name={name}
-      type={type}
       value={value}
       onChange={changeHandler}
-      required={required}
+      rows="6"
     />
   </Group>
 )
 
-Input.propTypes = {
+TextArea.propTypes = {
   changeHandler: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   value: PropTypes.string,
-  required: PropTypes.bool.isRequired,
-  type: PropTypes.oneOf(['text', 'tel', 'email']).isRequired,
 }
 
-Input.defaultProps = {
+TextArea.defaultProps = {
   value: '',
 }
 
-export default Input
+export default TextArea

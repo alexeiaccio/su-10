@@ -1,5 +1,5 @@
 /* global tw */
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled, { css } from 'react-emotion'
@@ -7,6 +7,8 @@ import styled, { css } from 'react-emotion'
 import Img from './Img'
 import HTMLContent from './Content'
 import { Button } from './Styles'
+import Form from './Form'
+import Modal from './Modal'
 
 import eco from '../assets/eco.svg'
 import woodBoardBlack from '../assets/wood-board-black.svg'
@@ -99,6 +101,10 @@ const Wrapper = styled(Link)`
   }
 `
 
+const contentStyles = css`
+  ${tw(['px-q36'])};
+`
+
 const ImgStyles = css`
   ${tw(['pin'])};
 `
@@ -119,40 +125,74 @@ const linkStyles = css`
   ])};
 `
 
-const PropductCard = ({
-  product: {
-    productlink,
-    producttitle,
-    productcaption,
-    productprice,
-    productimage,
-  },
-}) => (
-  <Card>
-    <Wrapper to={productlink.uid}>
-      <Img
-        src={productimage}
-        className={ImgStyles}
-        style={{ position: 'absolute' }}
-      />
-      <Content>
-        <H3>{producttitle.text}</H3>
-        <Description>
-          <HTMLContent content={productcaption.html} />
-        </Description>
-      </Content>
-    </Wrapper>
-    <Content>
-      <Link className={linkStyles} to={productlink.uid}>
-        <RoundIcon />
-        <Price>{`от ${productprice} руб./м3`}</Price>
-      </Link>
-      <ButtonContainer>
-        <Button>заказать</Button>
-      </ButtonContainer>
-    </Content>
-  </Card>
-)
+const formStyles = css`
+  ${tw(['text-black'])};
+`
+
+class PropductCard extends Component {
+  constructor() {
+    super()
+    this.toggleModal = this.toggleModal.bind(this)
+    this.state = {
+      modal: false,
+    }
+  }
+
+  toggleModal() {
+    const { modal } = this.state
+    this.setState({
+      modal: !modal,
+    })
+  }
+
+  render() {
+    const {
+      product: {
+        productlink,
+        producttitle,
+        productcaption,
+        productprice,
+        productimage,
+      },
+    } = this.props
+    const { modal } = this.state
+
+    return (
+      <Card>
+        <Wrapper to={productlink.uid}>
+          <Img
+            src={productimage}
+            className={ImgStyles}
+            style={{ position: 'absolute' }}
+          />
+          <Content className={contentStyles}>
+            <H3>{producttitle.text}</H3>
+            <Description>
+              <HTMLContent content={productcaption.html} />
+            </Description>
+          </Content>
+        </Wrapper>
+        <Content>
+          <Link className={linkStyles} to={productlink.uid}>
+            <RoundIcon />
+            <Price>{`от ${productprice} руб./м3`}</Price>
+          </Link>
+          <ButtonContainer>
+            <Button onClick={this.toggleModal}>заказать</Button>
+          </ButtonContainer>
+        </Content>
+        <Modal modal={modal} toggleModal={this.toggleModal}>
+          <Form
+            className={formStyles}
+            name="header-form"
+            textarea
+            value={producttitle.text}
+          />
+        </Modal>
+      </Card>
+    )
+  }
+}
 
 PropductCard.propTypes = {
   product: PropTypes.shape({

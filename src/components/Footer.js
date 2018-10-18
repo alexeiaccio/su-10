@@ -70,6 +70,10 @@ const TelBlock = styled('div')`
   }
 `
 
+const Copy = styled('div')`
+  ${tw(['mt-q24', 'text-xs'])};
+`
+
 const logoStyles = css`
   ${tw(['mb-q24', 'sm:mb-0'])};
 `
@@ -88,6 +92,10 @@ const Footer = ({ data }) => (
       <Row className={RowStyles}>
         <Col className={logoStyles} number={{ xs: 4, md: 2 }}>
           <Logo to="/" />
+          <Copy>
+            © 1998—
+            {new Date().getFullYear()} / СУ-10
+          </Copy>
         </Col>
         <Col number={{ xs: 12, sm: 6, md: 4 }}>
           <HeaderDescription>

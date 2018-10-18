@@ -8,7 +8,7 @@ import Img from './Img'
 
 const Wrapper = styled('div')`
   ${tw(['absolute', 'pin-t', 'pin-l', 'pin-r'])};
-  min-height: 75vh;
+  min-height: 90vh;
 `
 
 const ImgStyles = css`

@@ -1,7 +1,7 @@
-/* global localStorage */
+/* global sessionStorage */
 export const loadState = x => {
   try {
-    const serializedState = localStorage.getItem('values')
+    const serializedState = sessionStorage.getItem('values')
     if (serializedState === null) {
       return undefined
     }
@@ -13,7 +13,7 @@ export const loadState = x => {
 
 export const getState = () => {
   try {
-    const serializedState = localStorage.getItem('values')
+    const serializedState = sessionStorage.getItem('values')
     if (serializedState === null) {
       return undefined
     }
@@ -29,7 +29,7 @@ export const saveState = (location, values) => {
       ...getState(),
       [location]: values,
     })
-    localStorage.setItem('values', serializedState)
+    sessionStorage.setItem('values', serializedState)
   } catch (err) {
     // Ignore write errors.
   }
