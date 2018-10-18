@@ -77,7 +77,7 @@ class TableRow extends Component {
         <Modal modal={modal} toggleModal={this.toggleModal}>
           <Form
             className={formStyles}
-            name="header-form"
+            name="table-form"
             textarea
             value={value}
           />

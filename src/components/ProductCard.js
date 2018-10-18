@@ -184,7 +184,7 @@ class PropductCard extends Component {
         <Modal modal={modal} toggleModal={this.toggleModal}>
           <Form
             className={formStyles}
-            name="header-form"
+            name="product-card-form"
             textarea
             value={producttitle.text}
           />
