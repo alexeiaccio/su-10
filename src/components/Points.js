@@ -5,6 +5,7 @@ import styled, { css } from 'react-emotion'
 import s4 from 'node-uuid'
 
 import HTMLContent from './Content'
+import RotateAround from './RotateAround'
 import { Col, Container, Row, WrapToMD } from './Styles'
 
 const colStyles = css`
@@ -23,6 +24,7 @@ const Point = styled('div')`
     'border-solid',
     'border-white',
     'border-4',
+    'cursor-pointer',
     'h-q96',
     'mb-q24',
     'relative',
@@ -49,7 +51,9 @@ const Points = ({ items }) => (
     <Row className={WrapToMD}>
       {items.map(({ pointicon, pointtext }) => (
         <Col className={colStyles} key={s4()} number={{ xs: 12, sm: 6, md: 3 }}>
-          <Point key={s4()} url={pointicon.url} />
+          <RotateAround>
+            <Point key={s4()} url={pointicon.url} />
+          </RotateAround>
           <HTMLContent
             className={textStyles}
             content={pointtext.html}

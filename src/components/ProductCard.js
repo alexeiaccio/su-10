@@ -6,9 +6,10 @@ import styled, { css } from 'react-emotion'
 
 import Img from './Img'
 import HTMLContent from './Content'
-import { Button } from './Styles'
 import Form from './Form'
 import Modal from './Modal'
+import RotateAround from './RotateAround'
+import { Button } from './Styles'
 
 import eco from '../assets/eco.svg'
 import woodBoardBlack from '../assets/wood-board-black.svg'
@@ -174,7 +175,9 @@ class PropductCard extends Component {
         </Wrapper>
         <Content>
           <Link className={linkStyles} to={productlink.uid}>
-            <RoundIcon />
+            <RotateAround>
+              <RoundIcon />
+            </RotateAround>
             <Price>{`от ${productprice} руб./м3`}</Price>
           </Link>
           <ButtonContainer>
