@@ -93,15 +93,20 @@ class Slider extends Component {
   }
 
   dragStartHandler(e) {
-    this.setState({ clientX: e.clientX })
+    this.setState({
+      clientX: e.changedTouches ? e.changedTouches[0].clientX : e.clientX,
+    })
   }
 
   dragHandler(e) {
     const { clientX } = this.state
-    if (clientX - e.clientX > 50) {
+    const newClientX = e.changedTouches
+      ? e.changedTouches[0].clientX
+      : e.clientX
+    if (clientX - newClientX > 50) {
       this.handler('next')
     }
-    if (e.clientX - clientX > 50) {
+    if (newClientX - clientX > 50) {
       this.handler('prev')
     }
   }
