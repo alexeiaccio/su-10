@@ -4,14 +4,17 @@ import React from 'react'
 import s4 from 'node-uuid'
 import styled, { css, cx } from 'react-emotion'
 import { StaticQuery, Link, graphql } from 'gatsby'
+import words from 'lodash.words'
 
 import { Col, Container, JustifyCenter, Row } from './Styles'
 
 import woodBoard from '../assets/wood-board.svg'
 import woodBoardOrange from '../assets/wood-board-orange.svg'
+import cabinWhite from '../assets/cabin-white.svg'
+import cabinOrange from '../assets/cabin-orange.svg'
 
 const Icon = css`
-  ${tw(['mt-q12', 'ml-q48', 'pl-q48', 'relative', 'whitespace-no-wrap'])};
+  ${tw(['mt-q12', 'ml-q36', 'pl-q48', 'relative', 'whitespace-no-wrap'])};
   &::before {
     ${tw([
       'absolute',
@@ -25,23 +28,40 @@ const Icon = css`
     height: 2.625rem;
     top: -1.15rem;
     width: 2.375rem;
+    left: 0;
   }
+`
+
+const IconHome = ({ iconHome }) => css`
+  height: ${iconHome && '3.1rem'};
+  top: ${iconHome && '-1.5rem'};
+  width: ${iconHome && '3.1rem'};
+  left: ${iconHome && '-0.8rem'};
 `
 
 const Current = styled('span')`
   ${Icon};
+  ${({ iconHome }) => iconHome && tw(['ml-48'])};
   ${tw(['text-orange'])};
   &::before {
-    background-image: url(${woodBoardOrange});
+    ${IconHome};
+    background-image: url(${({ iconHome }) =>
+      iconHome ? cabinOrange : woodBoardOrange});
   }
 `
 
 const StyledLink = styled(Link)`
-  ${Icon};
-  ${tw(['underline', 'hover:no-underline'])};
+  ${tw(['mt-q12', 'underline', 'hover:no-underline'])};
   color: inherit;
+`
+
+const StyledSpan = styled('span')`
+  ${Icon};
+  ${({ iconHome }) => iconHome && tw(['ml-48'])};
   &::before {
-    background-image: url(${woodBoard});
+    ${IconHome};
+    background-image: url(${({ iconHome }) =>
+      iconHome ? cabinWhite : woodBoard});
   }
 `
 
@@ -59,7 +79,7 @@ const Wrapper = styled('nav')`
 `
 
 const rowStyles = css`
-  min-width: 50rem;
+  min-width: 68rem;
 `
 
 const Breadcrumbs = ({ location }) => (
@@ -84,21 +104,34 @@ const Breadcrumbs = ({ location }) => (
       <Wrapper>
         <Container>
           <Row className={cx(JustifyCenter, rowStyles)}>
-            {data.allPrismicProduct.edges.map(({ node }) => (
-              <Col
-                className={JustifyCenter}
-                key={s4()}
-                number={{ xs: 4, md: 3 }}
-              >
-                {location.pathname.replace(/\//g, '') === node.uid ? (
-                  <Current key={s4()}>{node.data.title.text}</Current>
-                ) : (
-                  <StyledLink key={s4()} to={node.uid}>
-                    {node.data.title.text}
-                  </StyledLink>
-                )}
-              </Col>
-            ))}
+            {data.allPrismicProduct.edges.map(({ node }) => {
+              const title = node.uid.includes('stroitelstvo')
+                ? words(node.data.title.text)
+                    .slice(0, 2)
+                    .join(' ')
+                : node.data.title.text
+              return (
+                <Col className={JustifyCenter} key={s4()} number={{ xs: 3 }}>
+                  {location.pathname.replace(/\//g, '') === node.uid ? (
+                    <Current
+                      iconHome={node.uid.includes('stroitelstvo')}
+                      key={s4()}
+                    >
+                      {title}
+                    </Current>
+                  ) : (
+                    <StyledLink key={s4()} to={node.uid}>
+                      <StyledSpan
+                        iconHome={node.uid.includes('stroitelstvo')}
+                        key={s4()}
+                      >
+                        {title}
+                      </StyledSpan>
+                    </StyledLink>
+                  )}
+                </Col>
+              )
+            })}
           </Row>
         </Container>
       </Wrapper>

@@ -4,16 +4,25 @@ import { graphql } from 'gatsby'
 import s4 from 'node-uuid'
 
 import ProductCard from './ProductCard'
-import { Col, marginBottomToMD, Row, WrapToMD } from './Styles'
+import { Col, marginBottomToMD, marginTopFromMD, Row, WrapToMD } from './Styles'
 
 const Propducts = ({ products }) => (
-  <Row className={WrapToMD}>
-    {products.map(product => (
-      <Col key={s4()} number={{ xs: 12, md: 4 }} className={marginBottomToMD}>
-        <ProductCard key={s4()} product={product} />
-      </Col>
-    ))}
-  </Row>
+  <>
+    <Row className={WrapToMD}>
+      {products.filter(x => x.productsize === 'sm').map(product => (
+        <Col key={s4()} number={{ xs: 12, md: 4 }} className={marginBottomToMD}>
+          <ProductCard key={s4()} product={product} />
+        </Col>
+      ))}
+    </Row>
+    <Row>
+      {products.filter(x => x.productsize === 'lg').map(product => (
+        <Col key={s4()} number={{ xs: 12 }} className={marginTopFromMD}>
+          <ProductCard key={s4()} product={product} />
+        </Col>
+      ))}
+    </Row>
+  </>
 )
 
 Propducts.propTypes = {
@@ -26,6 +35,7 @@ Propducts.propTypes = {
         html: PropTypes.string.isRequired,
       }).isRequired,
       productprice: PropTypes.string.isRequired,
+      productsize: PropTypes.string.isRequired,
       productlink: PropTypes.shape({
         uid: PropTypes.string.isRequired,
       }).isRequired,
@@ -69,6 +79,7 @@ export const query = graphql`
         productlink {
           uid
         }
+        productsize
       }
     }
   }

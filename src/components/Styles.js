@@ -254,6 +254,10 @@ const marginBottomToMD = css`
   ${tw(['mb-q24', 'md:mb-0'])};
 `
 
+const marginTopFromMD = css`
+  ${tw(['md:mt-q24'])};
+`
+
 const MarginLeftTwoCol = css`
   ${tw(['ml-1/6', 'sm:ml-auto'])};
 `
@@ -293,6 +297,7 @@ export {
   JustifyEnd,
   Logo,
   marginBottomToMD,
+  marginTopFromMD,
   MarginLeftTwoCol,
   MenuIcon,
   Row,

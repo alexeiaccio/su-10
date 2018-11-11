@@ -13,6 +13,7 @@ import { Button } from './Styles'
 
 import eco from '../assets/eco.svg'
 import woodBoardBlack from '../assets/wood-board-black.svg'
+import cabin from '../assets/cabin.svg'
 
 const Card = styled('div')`
   ${tw([
@@ -62,8 +63,9 @@ const RoundIcon = styled('div')`
     'rounded-full',
     '-mt-8',
   ])};
-  background-image: url(${woodBoardBlack});
-  background-size: 4rem;
+  background-image: url(${({ iconHome }) =>
+    iconHome ? cabin : woodBoardBlack});
+  background-size: ${({ iconHome }) => (iconHome ? '5rem' : '4rem')};
 `
 
 const Wrapper = styled(Link)`
@@ -113,6 +115,7 @@ const ImgStyles = css`
 const ButtonContainer = styled('div')`
   ${tw(['px-q36', 'w-full'])};
   box-sizing: border-box;
+  max-width: ${({ isWideCard }) => isWideCard && '20rem'};
 `
 
 const linkStyles = css`
@@ -154,6 +157,7 @@ class PropductCard extends Component {
         productcaption,
         productprice,
         productimage,
+        productsize,
       },
     } = this.props
     const { modal } = this.state
@@ -176,11 +180,11 @@ class PropductCard extends Component {
         <Content>
           <Link className={linkStyles} to={productlink.uid}>
             <RotateAround>
-              <RoundIcon />
+              <RoundIcon iconHome={productsize === 'lg'} />
             </RotateAround>
-            <Price>{`от ${productprice} руб./м3`}</Price>
+            <Price>{productprice}</Price>
           </Link>
-          <ButtonContainer>
+          <ButtonContainer isWideCard={productsize === 'lg'}>
             <Button onClick={this.toggleModal}>заказать</Button>
           </ButtonContainer>
         </Content>
